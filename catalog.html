@@ -20,7 +20,7 @@
             </a>
             <!-- Меню навигации-левая часть -->
             <ul class="site-nav-left">
-                <li class="site-nav-elem-current"><a>Каталог</a></li>
+                <li class="site-nav-elem site-nav-elem-current"><a>Каталог</a></li>
                 <li class="site-nav-elem"><a href="#">Доставка</a></li>
                 <li class="site-nav-elem"><a href="#">О компании</a></li>
             </ul>
@@ -254,9 +254,92 @@
         <!-- Копирайт -->
         <p class="footer-copyright">
             <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-htmlacademy-small.svg" alt="Логотип HTML Academy" width="109" height="39"></a>
-            <span>Сделано в <a  href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy </a>&copy 2019</span>
+            <span>Сделано в <a  href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy </a>&copy; 2019</span>
         </p>
     </footer>
+
+    <!-- Всплывающие окна -->
+    <!-- Выпадающее меню из главного меню Каталог -->
+    <section class="modal-site-nav-catalog-item">
+        <h2 class="visually-hiden">Подменю пункта Каталог</h2>
+        <ul class="catalog-list">
+            <li class="catalog-item catalog-item-hot">
+                <a href="#">Новинки</a>
+            </li>
+            <li class="catalog-item">
+                <a href="#">Сливочное</a>
+            </li>
+            <li class="catalog-item">
+                <a href="#">Щербеты</a>
+            </li>
+            <li class="catalog-item">
+                <a href="#">Фруктовый лед</a>
+            </li>
+            <li class="catalog-item">
+                <a href="#">Мелорин</a>
+            </li>
+        </ul>
+    </section>
+
+    <!-- Форма логина -->
+    <section class="modal modal-login">
+        <h2>Личный кабинет</h2>
+        <form class="login-form" action="#" method="POST">
+            <p class="login-item">
+                <label for="login-item-login" class="visually-hidden">Введите электронную почту</label>
+                <input id="login-item-login" type="text" name="login" value="" placeholder="Электронная почта">
+            </p>
+            <p class="login-item">
+                <label for="login-item-password" class="visually-hidden">Введите пароль</label>
+                <input id="login-item-password" type="password" name="password" value="" placeholder="Пароль">
+            </p>
+            <button class="button button-login-form" type="submit">Войти</button>
+            <p class="login-item-info">
+                <a class="login-item-info-forget" href="#">Забыли пароль?</a>
+                <a class="login-item-info-new-user" href="#">Новая регистрация</a>
+            </p>
+        </form>
+        <button type="button" class="modal-close">Закрыть</button>
+    </section>
+
+    <!-- Форма поиска -->
+    <section class="modal modal-search">
+        <h2 class="visually-hiden">Поиск</h2>
+        <form class="search-form" action="#" method="POST">
+            <label class="visually-hiden" for="search-item-id">Поиск</label>
+            <input type="text" id="search-item-id" name="search" value="" placeholder="Чего ищем?">
+            <!-- Кнопка под вопросом -->
+            <button type="submit" class="button button-search visually-hiden">Найти!</button>
+        </form>
+    </section>
+
+    <!-- Всплывающая корзина -->
+    <section class="modal modal-carpet-list">
+        <h2 class="visually-hiden">Список товаров в корзине</h2>
+        <ul class="carpet-list">
+            <li class="carpet-item">
+                <a href="#">Пломбир с апельсиновым джемом</a>
+                <span class="carpet-item-weight">1,5 кг</span>
+                <span class="carpet-item-x visually-hiden"> по цене за килограмм </span>
+                <span class="carpet-item-price">200 руб.</span>
+                <span class="carpet-item-total visually-hiden"> итого </span>
+                <span class="carpet-item-total-price">300 руб.</span>
+                <button type="button" class="delete-item visually-hidden">Удалить данную позицию</button>
+            </li>
+            <li class="carpet-item">
+                <a href="#">Клубничный пломбир с присыпкой из белого шоколада</a>
+                <span class="carpet-item-weight">1,5 кг</span>
+                <span class="carpet-item-x visually-hiden"> по цене за килограмм </span>
+                <span class="carpet-item-price">300 руб.</span>
+                <span class="carpet-item-total visually-hiden"> итого </span>
+                <span class="carpet-item-total-price">450 руб.</span>
+                <button type="button" class="delete-item visually-hidden">Удалить данную позицию</button>
+            </li>
+        </ul>
+        <button type="button" class="button button-modal-carpet-list">Оформить заказ</button>
+    </section>
+
+
 
 </body>
 
