@@ -7,10 +7,9 @@
 </head>
 
 <!-- Временно стиль подключил, чтоб логотип видно было -->
+<!-- ПЕРЕД ОТПРАВКОЙ НА ПРОВЕРКУ ВСТАВИТЬ ВСЕ SVG ИНЛАЙНОМ и УДАЛИТЬ ЭТОТ КОММЕНТАРИЙ -->
 
 <body style="background-color: #849d8f">
-
-
     <!-- Мейн хедер -->
     <!-- любое изменение -->
     <header class="header-main">
@@ -22,14 +21,66 @@
             </a>
             <!-- Меню навигации-левая часть -->
             <ul class="site-nav-left">
-                <li class="site-nav-elem"><a href="#">Каталог</a></li>
+                <li class="site-nav-elem"><a href="#">Каталог</a>
+                    <!-- Выпадающее меню из главного меню Каталог -->
+                    <section class="modal-site-nav-catalog-item">
+                        <h2 class="visually-hiden">Подменю пункта Каталог</h2>
+                        <ul class="catalog-list">
+                            <li class="catalog-item catalog-item-hot">
+                                <a href="#">Новинки</a>
+                            </li>
+                            <li class="catalog-item">
+                                <a href="catalog.html">Сливочное</a>
+                            </li>
+                            <li class="catalog-item">
+                                <a href="#">Щербеты</a>
+                            </li>
+                            <li class="catalog-item">
+                                <a href="#">Фруктовый лед</a>
+                            </li>
+                            <li class="catalog-item">
+                                <a href="#">Мелорин</a>
+                            </li>
+                        </ul>
+                    </section>
+                </li>
                 <li class="site-nav-elem"><a href="#">Доставка</a></li>
                 <li class="site-nav-elem"><a href="#">О компании</a></li>
             </ul>
             <!-- Меню навигации-правая часть -->
             <ul class="site-nav-right">
-                <li class="button button-search"><a href="#">Поиск</a></li>
-                <li class="button button-login"><a href="#">Вход</a></li>
+                <li class="button button-search"><a href="#">Поиск</a>
+                    <!-- Форма поиска -->
+                    <section class="modal modal-search">
+                        <h2 class="visually-hiden">Поиск</h2>
+                        <form class="search-form" action="#" method="POST">
+                            <label class="visually-hiden" for="search-item-id">Поиск</label>
+                            <input type="text" id="search-item-id" name="search" value="" placeholder="Чего ищем?">
+                        </form>
+                    </section>
+                </li>
+                <li class="button button-login"><a href="#">Вход</a>
+                    <!-- Форма логина -->
+                    <section class="modal modal-login">
+                        <h2>Личный кабинет</h2>
+                        <form class="login-form" action="#" method="POST">
+                            <p class="login-item">
+                                <label for="login-item-login" class="visually-hidden">Введите электронную почту</label>
+                                <input id="login-item-login" type="text" name="login" value="" placeholder="Электронная почта">
+                            </p>
+                            <p class="login-item">
+                                <label for="login-item-password" class="visually-hidden">Введите пароль</label>
+                                <input id="login-item-password" type="password" name="password" value="" placeholder="Пароль">
+                            </p>
+                            <button class="button button-login-form" type="submit">Войти</button>
+                            <p class="login-item-info">
+                                <a class="login-item-info-forget" href="#">Забыли пароль?</a>
+                                <a class="login-item-info-new-user" href="#">Новая регистрация</a>
+                            </p>
+                        </form>
+                        <button type="button" class="modal-close">Закрыть</button>
+                    </section>
+                </li>
                 <li class="button button-carpet"><a href="#">Корзина</a></li>
             </ul>
         </nav>
@@ -69,10 +120,13 @@
                 <li class="special-offers-item">
                     <h3>Малинка даром!</h3>
                     <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
+                    <!-- Кнопка -->
+                    <a class="button button-special-offer" href="#">Хочу варенья!</a>
                 </li>
                 <li class="special-offers-item">
                     <h3>Шоколадки даром!</h3>
                     <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
+                    <a class="button button-special-offer" href="#">Хочу шоколадки!</a>
                 </li>
             </ul>
         </section>
@@ -142,16 +196,16 @@
             <b>Магазин Глэйси - это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</b>
             <ul class="features-list">
                 <li class="features-item">
-                    <p>Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
+                    Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.
                 </li>
                 <li class="features-item">
-                    <p>Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</p>
+                    Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.
                 </li>
                 <li class="features-item">
-                    <p>Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
+                    Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.
                 </li>
                 <li class="features-item">
-                    <p>Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</p>
+                    Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.
                 </li>
             </ul>
         </section>
@@ -164,8 +218,16 @@
         <section class="subscription-form">
             <h2 class="visually-hidden">Подписка на рассылку</h2>
             <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-            <!-- Здесь будет форма подписки -->
+            <!-- Форма подписки -->
+            <form class="form-mailing" action="#" method="POST">
+                <p class="mailing-item">
+                    <label for="mailing-item-mail" class="visually-hidden">Введите вашу электронную почту</label>
+                    <input id="mailing-item-mail" type="email" name="email" value="" placeholder="Электронная почта">
+                </p>
+                <button type="submit" class="button button-form-mailing">Отправить</button>
+            </form>
         </section>
+
 
         <!-- Карта, адрес с кнопкой формы обратной связи -->
         <section class="map-and-adress">
@@ -191,7 +253,26 @@
                 </p>
                 <a class="button button-feedback" href="#">Форма обратной связи</a>
             </div>
-
+        </section>
+        <!-- Всплывающее окно - Форма обратной связи -->
+        <section class="modal modal-feedback-form">
+            <h2 class="visually-hiden">Форма обратной связи</h2>
+            <p class="modal-feedback-form-slogan">Мы обязательно вам ответим!</p>
+            <form class="feedback-form" action="#" method="POST">
+                <p class="feedback-item">
+                    <label for="feedback-item-name" class="visually-hidden">Введите свое имя</label>
+                    <input id="feedback-item-name" type="text" name="name" value="" placeholder="Как вас зовут?">
+                </p>
+                <p class="feedback-item">
+                    <label for="feedback-item-mail" class="visually-hidden">Введите вашу почту для ответа</label>
+                    <input id="feedback-item-mail" type="email" name="mail" value="" placeholder="Ваша почта для ответа?">
+                </p>
+                <p class="feedback-item">
+                    <textarea class="feedback-item-text" name="feedback-text" cols="40" rows="5">Напишите что-нибудь...</textarea>
+                </p>
+                <button type="submit" class="button button-form-feedback">Отправить</button>
+            </form>
+            <button type="button" class="modal-close">Закрыть</button>
         </section>
 
     </main>
@@ -217,87 +298,11 @@
             </ul>
         </div>
         <!-- Копирайт -->
-        <p class="footer-copyright">
+        <div class="footer-copyright">
             <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-htmlacademy-small.svg" alt="Логотип HTML Academy" width="109" height="39"></a>
-            <span>Сделано в <a  href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy </a>&copy; 2019</span>
-        </p>
+            <p>Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy </a>&copy; 2019</p>
+        </div>
     </footer>
-
-    <!-- Всплывающие окна -->
-    <!-- Выпадающее меню из главного меню Каталог -->
-    <section class="modal-site-nav-catalog-item">
-        <h2 class="visually-hiden">Подменю пункта Каталог</h2>
-        <ul class="catalog-list">
-            <li class="catalog-item catalog-item-hot">
-                <a href="#">Новинки</a>
-            </li>
-            <li class="catalog-item">
-                <a href="#">Сливочное</a>
-            </li>
-            <li class="catalog-item">
-                <a href="#">Щербеты</a>
-            </li>
-            <li class="catalog-item">
-                <a href="#">Фруктовый лед</a>
-            </li>
-            <li class="catalog-item">
-                <a href="#">Мелорин</a>
-            </li>
-        </ul>
-    </section>
-
-    <!-- Форма логина -->
-    <section class="modal modal-login">
-        <h2>Личный кабинет</h2>
-        <form class="login-form" action="#" method="POST">
-            <p class="login-item">
-                <label for="login-item-login" class="visually-hidden">Введите электронную почту</label>
-                <input id="login-item-login" type="text" name="login" value="" placeholder="Электронная почта">
-            </p>
-            <p class="login-item">
-                <label for="login-item-password" class="visually-hidden">Введите пароль</label>
-                <input id="login-item-password" type="password" name="password" value="" placeholder="Пароль">
-            </p>
-            <button class="button button-login-form" type="submit">Войти</button>
-            <p class="login-item-info">
-                <a class="login-item-info-forget" href="#">Забыли пароль?</a>
-                <a class="login-item-info-new-user" href="#">Новая регистрация</a>
-            </p>
-        </form>
-        <button type="button" class="modal-close">Закрыть</button>
-    </section>
-
-    <!-- Форма поиска -->
-    <section class="modal modal-search">
-        <h2 class="visually-hiden">Поиск</h2>
-        <form class="search-form" action="#" method="POST">
-            <label class="visually-hiden" for="search-item-id">Поиск</label>
-            <input type="text" id="search-item-id" name="search" value="" placeholder="Чего ищем?">
-            <!-- Кнопка под вопросом -->
-            <button type="submit" class="button button-search visually-hiden">Найти!</button>
-        </form>
-    </section>
-
-    <!--  Форма обратной связи -->
-    <section class="modal modal-feedback-form">
-        <h2 class="visually-hiden">Форма обратной связи</h2>
-        <p class="modal-feedback-form-slogan">Мы обязательно вам ответим!</p>
-        <form class="feedback-form" action="#" method="POST">
-            <p class="feedback-item">
-                <label for="feedback-item-name" class="visually-hidden">Введите свое имя</label>
-                <input id="feedback-item-name" type="text" name="name" value="" placeholder="Как вас зовут?">
-            </p>
-            <p class="feedback-item">
-                <label for="feedback-item-mail" class="visually-hidden">Введите вашу почту для ответа</label>
-                <input id="feedback-item-mail" type="email" name="mail" value="" placeholder="Ваша почта для ответа?">
-            </p>
-            <p class="feedback-item">
-                <textarea id="feedback-item-text" name="feedback-text" cols="40" rows="5">Напишите что-нибудь...</textarea>
-            </p>
-            <button type="submit" class="button button-form-feedback">Отправить</button>
-        </form>
-        <button type="button" class="modal-close">Закрыть</button>
-    </section>
 
 </body>
 
