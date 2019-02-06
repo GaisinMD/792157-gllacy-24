@@ -4,9 +4,9 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Глейси</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
-  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
 </head>
 
 <body class="catalog-page">
@@ -21,15 +21,15 @@
       <!-- Меню навигации-левая часть -->
       <ul class="site-nav-main">
         <li class="site-nav-elem site-nav-elem-current"><a href="#">Каталог</a>
-          <!-- Выпадающее меню из главного меню Каталог -->
-          <section class="modal-site-nav-catalog-item">
-            <h2 class="visually-hiden">Подменю пункта Каталог</h2>
+          <!-- Выпадающее меню из главного меню Каталог СКРЫТО-->
+          <div class="submenu-site-nav-catalog-item">
+            <h2 class="visually-hidden">Подменю пункта Каталог</h2>
             <ul class="catalog-list">
               <li class="catalog-item catalog-item-hot">
                 <a href="#">Новинки</a>
               </li>
               <li class="catalog-item">
-                <a>Сливочное</a>
+                <a href="catalog.html">Сливочное</a>
               </li>
               <li class="catalog-item">
                 <a href="#">Щербеты</a>
@@ -41,7 +41,7 @@
                 <a href="#">Мелорин</a>
               </li>
             </ul>
-          </section>
+          </div>
         </li>
         <li class="site-nav-elem"><a href="#">Доставка</a></li>
         <li class="site-nav-elem"><a href="#">О компании</a></li>
