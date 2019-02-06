@@ -6,6 +6,7 @@
   <title>HTML Academy: Глейси</title>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
 </head>
 
 <!-- ПЕРЕД ОТПРАВКОЙ НА ПРОВЕРКУ ВСТАВИТЬ ВСЕ SVG ИНЛАЙНОМ и УДАЛИТЬ ЭТОТ КОММЕНТАРИЙ -->
@@ -21,11 +22,11 @@
         <img src="img/logo.svg" alt="Логотип Gllacy Shop" width="154" height="64">
       </a>
       <!-- Меню навигации-левая часть -->
-      <ul class="site-nav-left">
+      <ul class="site-nav-main">
         <li class="site-nav-elem"><a href="#">Каталог</a>
-          <!-- Выпадающее меню из главного меню Каталог -->
+          <!-- Выпадающее меню из главного меню Каталог СКРЫТО-->
           <section class="modal-site-nav-catalog-item">
-            <h2 class="visually-hiden">Подменю пункта Каталог</h2>
+            <h2 class="visually-hidden">Подменю пункта Каталог</h2>
             <ul class="catalog-list">
               <li class="catalog-item catalog-item-hot">
                 <a href="#">Новинки</a>
@@ -49,21 +50,21 @@
         <li class="site-nav-elem"><a href="#">О компании</a></li>
       </ul>
       <!-- Меню навигации-правая часть -->
-      <ul class="site-nav-right">
-        <li class="button button-search"><a href="#">Поиск</a>
+      <ul class="site-nav-other">
+        <li class="button-search"><a href="#">Поиск</a>
           <!-- Форма поиска -->
           <section class="modal modal-search">
-            <h2 class="visually-hiden">Поиск</h2>
+            <h2 class="visually-hidden">Поиск</h2>
             <form class="search-form" action="#" method="POST">
-              <label class="visually-hiden" for="search-item-id">Поиск</label>
+              <label class="visually-hidden" for="search-item-id">Поиск</label>
               <input type="text" id="search-item-id" name="search" value="" placeholder="Чего ищем?">
             </form>
           </section>
         </li>
-        <li class="button button-login"><a href="#">Вход</a>
+        <li class="button-login"><a href="#">Вход</a>
           <!-- Форма логина -->
           <section class="modal modal-login">
-            <h2>Личный кабинет</h2>
+            <h2 class="visually-hidden">Личный кабинет</h2>
             <form class="login-form" action="#" method="POST">
               <p class="login-item">
                 <label for="login-item-login" class="visually-hidden">Введите электронную почту</label>
@@ -82,7 +83,7 @@
             <button type="button" class="modal-close">Закрыть</button>
           </section>
         </li>
-        <li class="button button-carpet"><a href="#">Корзина</a></li>
+        <li class="button-carpet"><a href="#">Пусто</a></li>
       </ul>
     </nav>
     <div class="header-contacts">
@@ -137,56 +138,56 @@
     <!-- Секция хитов прдаж -->
     <section class="top-sellers">
       <h2 class="visually-hidden">Хиты продаж</h2>
-      <ul class="top-sellers-list">
+      <ul class="catalog-product top-sellers-list">
         <!-- Карточка товара -->
-        <li class="top-sellers-item">
+        <li class="product-item">
           <h3>
-            <a class="top-sellers-item-title" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+            <a class="product-item-title" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
           </h3>
-          <a class="top-sellers-item-image" href="#">
+          <a class="product-item-image" href="#">
             <img src="img/icecream1.png" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267">
           </a>
-          <p class="top-sellers-item-price">
+          <p class="product-item-price">
             <b>310 Р</b>
             <span>/кг</span>
           </p>
         </li>
         <!-- Карточка товара -->
-        <li class="top-sellers-item">
+        <li class="product-item">
           <h3>
-            <a class="top-sellers-item-title" href="#">Сливочно-кофейное с кусочками шоколада</a>
+            <a class="product-item-title" href="#">Сливочно-кофейное с кусочками шоколада</a>
           </h3>
-          <a class="top-sellers-item-image" href="#">
+          <a class="product-item-image" href="#">
             <img src="img/icecream2.png" alt="Сливочно-кофейное с кусочками шоколада" width="267" height="267">
           </a>
-          <p class="top-sellers-item-price">
-            <b>310 Р</b>
+          <p class="product-item-price">
+            <b>380 Р</b>
             <span>/кг</span>
           </p>
         </li>
         <!-- Карточка товара -->
-        <li class="top-sellers-item">
+        <li class="product-item">
           <h3>
-            <a class="top-sellers-item-title" href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
+            <a class="product-item-title" href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
           </h3>
-          <a class="top-sellers-item-image" href="#">
+          <a class="product-item-image" href="#">
             <img src="img/icecream3.png" alt="Сливочно-клубничное с присыпкой из белого шоколада" width="267" height="267">
           </a>
-          <p class="top-sellers-item-price">
-            <b>310 Р</b>
+          <p class="product-item-price">
+            <b>355 Р</b>
             <span>/кг</span>
           </p>
         </li>
         <!-- Карточка товара -->
-        <li class="top-sellers-item">
+        <li class="product-item">
           <h3>
-            <a class="top-sellers-item-title" href="#">Сливочное крем-брюле с карамельной подливкой</a>
+            <a class="product-item-title" href="#">Сливочное крем-брюле с карамельной подливкой</a>
           </h3>
-          <a class="top-sellers-item-image" href="#">
+          <a class="product-item-image" href="#">
             <img src="img/icecream4.png" alt="Сливочное крем-брюле с карамельной подливкой" width="267" height="267">
           </a>
-          <p class="top-sellers-item-price">
-            <b>310 Р</b>
+          <p class="product-item-price">
+            <b>415 Р</b>
             <span>/кг</span>
           </p>
         </li>
@@ -223,17 +224,19 @@
     </section>
     <!-- Форма подписки на рассылку -->
     <section class="subscription-form">
-      <h2 class="visually-hidden">Подписка на рассылку</h2>
-      <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит.
-        Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-      <!-- Форма подписки -->
-      <form class="form-mailing" action="#" method="POST">
-        <p class="mailing-item">
-          <label for="mailing-item-mail" class="visually-hidden">Введите вашу электронную почту</label>
-          <input id="mailing-item-mail" type="email" name="email" value="" placeholder="Электронная почта">
-        </p>
-        <button type="submit" class="button button-form-mailing">Отправить</button>
-      </form>
+      <div class=subscription-form-background>
+        <h2 class="visually-hidden">Подписка на рассылку</h2>
+        <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит.
+          Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
+        <!-- Форма подписки -->
+        <form class="form-mailing" action="#" method="POST">
+          <p class="mailing-item">
+            <label for="mailing-item-mail" class="visually-hidden">Введите вашу электронную почту</label>
+            <input id="mailing-item-mail" type="email" name="email" value="" placeholder="Электронная почта">
+          </p>
+          <button type="submit" class="button button-form-mailing">Отправить</button>
+        </form>
+      </div>
     </section>
 
 
@@ -266,7 +269,7 @@
     </section>
     <!-- Всплывающее окно - Форма обратной связи -->
     <section class="modal modal-feedback-form">
-      <h2 class="visually-hiden">Форма обратной связи</h2>
+      <h2 class="visually-hidden">Форма обратной связи</h2>
       <p class="modal-feedback-form-slogan">Мы обязательно вам ответим!</p>
       <form class="feedback-form" action="#" method="POST">
         <p class="feedback-item">
@@ -301,7 +304,7 @@
     <!-- Документы -->
     <div class="footer-documents">
       <ul class="footer-documents-list">
-        <li class="footer-documents-item"><a href="#">Для поставщиков</a></li>
+        <li class="footer-documents-item footer-documents-item-bold"><a href="#">Для поставщиков</a></li>
         <li class="footer-documents-item"><a href="#">Наши документы</a></li>
         <li class="footer-documents-item"><a href="#">О производстве</a></li>
         <li class="footer-documents-item"><a href="#">Экологические стандарты</a></li>
