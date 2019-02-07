@@ -32,6 +32,8 @@ body {
   color: #ffffff;
   text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
 
+  text-align: center;
+  vertical-align: middle;
 }
 
 .button:hover,
@@ -171,8 +173,70 @@ body {
 }
 
 /* MAIN */
-/* КРАСНАЯ ЗОНА */
+/* Слайды */
+.slides-list,
+.slides-switch-list {
+  list-style: none;
+}
 
+.slides-list li:nth-child(1) {
+  background-image: url("../img/icecream-double-1.png");
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+.slides-list li:nth-child(2) {
+  background-image: url("../img/icecream-double-2.png");
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+.slides-list li:nth-child(3) {
+  background-image: url("../img/icecream-double-3.png");
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+.slides-item {
+  font-size: 60px;
+  line-height: 60px;
+  font-weight: bold;
+  text-align: center;
+  color: #ffffff;
+}
+
+.button-give-me-both {
+  font-size: 32px;
+  line-height: 44px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+/* секция спецпредложений */
+.special-offers-list {
+  list-style: none;
+}
+
+.special-offers-list h3 {
+  font-size: 35px;
+  line-height: 41px;
+  font-weight: bold;  
+  color: #ffffff;
+}
+
+.special-offers-list p {
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: bold;  
+  color: #ffffff;
+}
+
+.button-special-offer {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: bold;
+  color: #ffffff;
+}
 
 /* Секция фьючеров */
 .features {
@@ -250,10 +314,42 @@ body {
   line-height: 24px;
   font-weight: bold;
 }
-/* доверсатать кнопку */
 
+.button-form-mailing {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: bold;
+  color: #ffffff;
+}
 
-/* КРАСНАЯ ЗОНА - КАРТА */
+.map-item {
+  background-image: url("../img/map-placeholder.jpg");
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+.adress-item {
+  background-color: #ffffff;
+  font-size: 14px;
+  line-height: 20px;  
+  color: #000000;
+}
+
+.adress-item-text,
+.adress-item-header a {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #000000;
+}
+
+.button-feedback {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: bold;
+  color: #ffffff;
+}
 
 /* временн скрытая форма обратной связи */
 .modal-feedback-form {
@@ -341,7 +437,50 @@ footer {
 }
 
 
-/* КРАСНАЯ ЗОНА */
+/* форма фильтров */
+.filter-form fieldset {
+  border: none;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.filter-form {
+  font-size: 14px; 
+  line-height: 18px; 
+  font-weight: 500;
+  text-align: left;
+  color: #ffffff;
+}
+
+.filter-form legend {
+  line-height: 16px;
+}
+
+.filter-form ul {
+  list-style: none;
+}
+
+.button-filter-form {
+  font: inherit;
+
+  border: 2px solid #ffffff;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+
+  text-align: center;
+  vertical-align: middle;
+}
+
+.button-filter-form:hover,
+.button-filter-form:focus {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.button-filter-form:active {
+  box-shadow: inset 0px 2px 1px 0 #696969;
+  background-color: #ededed;
+  color: #000000;
+}
 
 /* карточки товаров */
 .catalog-product {
@@ -384,7 +523,27 @@ footer {
   text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
 }
 
-/* КРАСНАЯ ЗОНА - пагинатор */
+/* пагинатор */
+.catalog-paginator-list {
+  list-style: none;
+}
+.paginator-item a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.paginator-item a:hover,
+.paginator-item a:focus,
+.paginator-item a:active {
+  background-color:  rgba(255, 255, 255, 0.2);
+}
+
+.paginator-item-current a {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+
 
 
 
