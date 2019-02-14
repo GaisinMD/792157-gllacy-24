@@ -532,11 +532,6 @@ html {
   color: #ffffff;
 }
 
-/* на будущее */
-/* .slides-switch-list { */
-/* order: -1; */
-/* } */
-
 
 /* секция спецпредложений */
 .special-offers-list {
@@ -589,11 +584,11 @@ html {
 
 /* Секция фьючеров */
 .features {
-  min-height: 275px;
+  min-height: 306px;
   background-image: url("../img/vaffle-layer.png");
   background-position: top center;
   background-repeat: no-repeat;
-  padding-top: 30px;
+  padding-top: 26px;
   margin-bottom: 40px;
 }
 
@@ -601,22 +596,70 @@ html {
   display: block;
   font-size: 24px;
   line-height: 30px;
-  font-weight: 500;
+  font-weight: 500; 
+  text-align: left;      
+  font-style: normal;
+  font-stretch: normal;  
+  letter-spacing: normal;
+  color: #323232;
   margin-bottom: 10px;
-  margin-left: 20px;
+  padding-left: 20px;
 }
 
 .features-list {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
-  padding-left: 20px;
+  justify-content: space-between;  
+  /*важно*/
+  width: 1146px;      
+  /*важно*/
+  padding: 0;
+  padding-right: 20px;
+  margin: 0;
 }
 
 .features-item {
-  padding-right: 33px;
-  padding-left: 50px;
-  width: 480px;
+  position: relative;
+  padding-left: 76px;  
+  padding-top: 12px;  
+  padding-bottom: 10px;
+  padding-right: 7px;
+  width: 560px;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;  
+  letter-spacing: normal;
+  text-align: left;
+  color: #323232;
+}
+
+.features-item::before {
+  content: "";
+  position: absolute;
+  width: 49px;
+  height: 49px;
+  left: 20px;
+  top: -4px;
+
+}
+
+.features-item-icecream::before {
+  background-image: url("../img/ice-cream-icon.svg")
+}
+
+.features-item-leaf::before {
+  background-image: url("../img/leaf-icon.svg")
+}
+
+.features-item-cow::before {
+  background-image: url("../img/cow-icon.svg")
+}
+
+.features-item-termometr::before {
+  background-image: url("../img/termometr-icon.svg")
 }
 
 
