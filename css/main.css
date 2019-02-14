@@ -52,13 +52,11 @@ html {
   background-color: #f26843;
   background-image: linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
   box-shadow: 0 1px 1px rgba(172, 16, 0, 1);
-
   font-family: Roboto;
   font-weight: bold;
   text-decoration: none;
   color: #ffffff;
   text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
-
   text-align: center;
   vertical-align: middle;
 }
@@ -68,8 +66,7 @@ html {
   outline: none;
   background-color: #ed705e;
   background-image: linear-gradient(90deg, #ed705e 0%, #f58669 100%);
-
-  box-shadow: 0px 2px 0px 0px rgba(172, 16, 0, 1);
+  box-shadow: 0px 2px 0px 0px rgba(172, 16, 0, 1);  
 }
 
 .button:active {
@@ -164,11 +161,15 @@ html {
 }
 
 .catalog-item {
+  /* важно */
   min-width: 143px;
+  /* важно */
 }
 
 .catalog-item a {
+  /* важно */
   display: block;
+  /* важно */
   font-size: 14px;
   line-height: 16px;
   font-weight: normal;
@@ -187,7 +188,7 @@ html {
 
 .catalog-item-hot a {
   padding-top: 13px;
-  font-weight: bold;  
+  font-weight: bold;
 }
 
 .catalog-item-hot {
@@ -196,7 +197,7 @@ html {
 
 .catalog-item-hot::after {
   position: absolute;
-  content: "";  
+  content: "";
   bottom: 0;
   left: 6px;
   width: 128px;
@@ -295,7 +296,7 @@ html {
   display: none;
   position: absolute;
   right: 10px;
-  top: 36px;  
+  top: 36px;
 }
 
 .site-nav-other>li:hover .section-search {
@@ -312,7 +313,7 @@ html {
   color: #999999;
   font-size: 14px;
   line-height: 24px;
-  font-weight: normal;  
+  font-weight: normal;
 }
 
 .search-form input {
@@ -324,6 +325,12 @@ html {
   height: 44px;
   padding-left: 15px;
   margin: 20px 15px;
+  border: 1px solid #d3d3d2;
+  border-radius: 4px;
+}
+
+.search-form input:hover {
+  border: 2px solid rgba(154, 154, 154, 0.52);
 }
 
 /* кнопка логина */
@@ -346,7 +353,9 @@ html {
   background-repeat: no-repeat;
 }
 
-.button-login:hover::before {
+.button-login:hover::before,
+.button-login:focus::before,
+.button-login:active::before {
   background-image: url("../img/entrance-black.svg");
   background-position: center;
   background-repeat: no-repeat;
@@ -356,8 +365,12 @@ html {
 .section-login {
   position: absolute;
   right: 10px;
-  top: 28px;  
-  /* display: none; */
+  top: 28px;
+  display: none;
+}
+
+.site-nav-other>li:hover .section-login {
+  display: block;
 }
 
 .section-login p {
@@ -372,6 +385,69 @@ html {
   font-weight: normal;
 }
 
+.login-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.login-item input::placeholder {
+  color: #999999;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: normal;
+}
+
+.login-item input {
+  color: #323232;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: bold;
+  width: 241px;
+  height: 44px;
+  padding-left: 15px;
+  margin-left: 19px;
+  margin-top: 20px;
+  margin-right: 17px;
+  border: 1px solid #d3d3d2;
+  border-radius: 4px;
+}
+
+.login-item input:hover {
+  border: 2px solid rgba(154, 154, 154, 0.52);
+}
+
+.button-login-form {
+  width: 100px;
+  min-height: 44px;  
+  margin-left: 19px;
+  margin-top: 20px;
+  margin-bottom: 22px;
+  border-radius: 21px;
+}
+
+.section-login .login-item-info {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding-right: 20px;
+  padding-top: 18px;
+}
+
+.login-item-info a {
+  text-decoration: underline;
+  padding: 0;
+  margin: 0;  
+}
+
+.login-item-info a:hover,
+.login-item-info a:focus,
+.login-item-info a:active {
+  color: #e84d37;
+  text-decoration: underline;
+}
+
+/* кнопка корзины */
 .button-basket {
   background-color: rgba(225, 225, 225, 0.2);
   height: 32px;
@@ -392,7 +468,9 @@ html {
   background-repeat: no-repeat;
 }
 
-.button-basket:hover::before {
+.button-basket:hover::before,
+.button-basket:focus::before,
+.button-basket:active::before {
   background-image: url("../img/basket-black.svg");
   background-position: center;
   background-repeat: no-repeat;
@@ -751,13 +829,30 @@ footer {
   text-decoration: none;
 }
 
-.basket-active a {
+/* кнопка активной корзины */
+.button-basket-active {
   background-color: #ffffff;
   color: #000000;
+  height: 32px;
+  width: 100px;
+  padding-left: 45px;
+  padding-top: 10px;
+}
+
+.button-basket-active::before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 16px;
+  width: 21px;
+  height: 19px;
+  background-image: url("../img/basket-red.svg");
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 /* временно скрытый попап корзины */
-.modal-basket-list {
+.section-basket {
   display: none;
 }
 
