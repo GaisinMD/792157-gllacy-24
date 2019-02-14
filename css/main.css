@@ -66,7 +66,8 @@ html {
   outline: none;
   background-color: #ed705e;
   background-image: linear-gradient(90deg, #ed705e 0%, #f58669 100%);
-  box-shadow: 0px 2px 0px 0px rgba(172, 16, 0, 1);  
+  box-shadow: 0px 2px 0px 0px rgba(172, 16, 0, 1);
+  cursor: pointer;
 }
 
 .button:active {
@@ -74,6 +75,7 @@ html {
   background-color: #e74a35;
   background-image: linear-gradient(90deg, #e74a35 0%, #f26843 100%);
   box-shadow: inset 0px 2px 2px 0px rgba(148, 39, 24, 1);
+  cursor: pointer;
 }
 
 
@@ -142,7 +144,7 @@ html {
 .submenu-catalog {
   display: none;
   position: absolute;
-  top: 30px;
+  top: 25px;
   left: -5px;
 }
 
@@ -155,9 +157,11 @@ html {
   flex-wrap: wrap;
   border-radius: 5px;
   padding: 0;
+  margin-top: 5px;
   list-style: none;
   background-color: #f8f7f4;
   box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
+  overflow: hidden;
 }
 
 .catalog-item {
@@ -214,31 +218,6 @@ html {
   background-color: #f6b5a5;
 }
 
-.catalog-list a:first-child:hover,
-.catalog-list a:first-child:focus {
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  background-color: #fbded7;
-}
-
-.catalog-list a:last-child:hover,
-.catalog-list a:last-child:focus {
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-  background-color: #fbded7;
-}
-
-.catalog-list a:first-child:active {
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  background-color: #f6b5a5;
-}
-
-.catalog-list a:last-child:active {
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-  background-color: #f6b5a5;
-}
 
 /* Правое главное меню */
 .site-nav-other {
@@ -292,19 +271,20 @@ html {
   position: relative;
 }
 
-.section-search {
+.search {
   display: none;
   position: absolute;
   right: 10px;
-  top: 36px;
+  top: 31px;
 }
 
-.site-nav-other>li:hover .section-search {
+.site-nav-other>li:hover .search {
   display: block;
 }
 
 .search-form,
 .login-form {
+  margin-top: 5px;
   background-color: #f8f7f4;
   border-radius: 5px;
 }
@@ -335,41 +315,35 @@ html {
 
 /* кнопка логина */
 .button-login {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   background-color: rgba(225, 225, 225, 0.2);
   height: 32px;
-  width: 100px;
-  padding-left: 42px;
+  width: 93px;
+  padding-left: 16px;
 }
 
-.button-login::before {
-  content: "";
-  position: absolute;
-  top: 6px;
-  left: 16px;
-  width: 21px;
-  height: 19px;
-  background-image: url("../img/entrance.svg");
-  background-position: center;
-  background-repeat: no-repeat;
+.button-login svg {
+  margin-bottom: 1px;
+  margin-right: 5px;
 }
 
-.button-login:hover::before,
-.button-login:focus::before,
-.button-login:active::before {
-  background-image: url("../img/entrance-black.svg");
-  background-position: center;
-  background-repeat: no-repeat;
+.button-login:hover g,
+.button-login:focus g,
+.button-login:active g {
+  fill: #000000;
 }
 
 /* выпадающая форма логина */
-.section-login {
+.login {
   position: absolute;
   right: 10px;
-  top: 28px;
+  top: 31px;
   display: none;
 }
 
-.site-nav-other>li:hover .section-login {
+.site-nav-other>li:hover .login {
   display: block;
 }
 
@@ -419,7 +393,7 @@ html {
 
 .button-login-form {
   width: 100px;
-  min-height: 44px;  
+  min-height: 44px;
   margin-left: 19px;
   margin-top: 20px;
   margin-bottom: 22px;
@@ -437,7 +411,7 @@ html {
 .login-item-info a {
   text-decoration: underline;
   padding: 0;
-  margin: 0;  
+  margin: 0;
 }
 
 .login-item-info a:hover,
@@ -449,31 +423,24 @@ html {
 
 /* кнопка корзины */
 .button-basket {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   background-color: rgba(225, 225, 225, 0.2);
   height: 32px;
   width: 100px;
-  padding-left: 45px;
+  padding-left: 16px;
   padding-top: 10px;
 }
 
-.button-basket::before {
-  content: "";
-  position: absolute;
-  top: 6px;
-  left: 16px;
-  width: 21px;
-  height: 19px;
-  background-image: url("../img/basket.svg");
-  background-position: center;
-  background-repeat: no-repeat;
+.button-basket svg {
+  margin-right: 7px;
 }
 
-.button-basket:hover::before,
-.button-basket:focus::before,
-.button-basket:active::before {
-  background-image: url("../img/basket-black.svg");
-  background-position: center;
-  background-repeat: no-repeat;
+.button-basket:hover g,
+.button-basket:focus g,
+.button-basket:active g {
+  fill: #000000;
 }
 
 /* header контакты */
@@ -790,21 +757,67 @@ footer {
   min-height: 103px;
   margin-left: auto;
   margin-right: auto;
+  /* margin-top: 7px; */
 }
 
-.footer-container {
+.footer-container {  
+  padding-top: 7px;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  flex-wrap: wrap;  
   align-items: center;
 }
 
 .footer-social-list,
 .footer-documents-list {
+  display: flex;
+  flex-wrap: wrap;
   list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 28px;
 }
 
-.footer-documents-item-bold {
+/* social icons */
+.footer-social-list {
+  margin-right: 236px;
+}
+
+.footer-social-item {
+  margin-right: 11px;
+}
+
+.footer-social-item:last-child {
+  margin-right: 0;
+}
+
+.footer-social-item svg {
+  width: 38px;
+  height: 38px;
+  border: 3px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+}
+
+.footer-social-item:hover svg {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* documents */
+.footer-documents {
+  margin-top: -8px;
+}
+
+.footer-documents-list {
+  height: 40px;  
+  flex-direction: column;  
+  justify-content: space-between;
+}
+
+.footer-documents-list a{
+  font-weight: normal;
+  margin-right: 32px;  
+}
+
+.footer-documents-item:first-child a{
   font-weight: bold;
 }
 
@@ -817,9 +830,18 @@ footer {
   color: #ffbc9e;
 }
 
+/* copyright */
 .footer-copyright {
+  margin-left: auto;
+  padding-top: 6px;
+  padding-left: 2px;
   font-size: 12px;
   line-height: 16px;
+}
+
+.footer-copyright p {
+  margin: 0;
+  padding: 0;
 }
 
 /* стилис catalog.html */
@@ -831,24 +853,19 @@ footer {
 
 /* кнопка активной корзины */
 .button-basket-active {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   background-color: #ffffff;
   color: #000000;
   height: 32px;
-  width: 100px;
-  padding-left: 45px;
+  width: 117px;
+  padding-left: 16px;
   padding-top: 10px;
 }
 
-.button-basket-active::before {
-  content: "";
-  position: absolute;
-  top: 6px;
-  left: 16px;
-  width: 21px;
-  height: 19px;
-  background-image: url("../img/basket-red.svg");
-  background-position: center;
-  background-repeat: no-repeat;
+.button-basket-active svg {
+  margin-right: 5px;
 }
 
 /* временно скрытый попап корзины */
