@@ -288,14 +288,6 @@ html {
   background-color: #f8f7f4;
   border-radius: 5px;
 }
-
-.search-form input::placeholder {
-  color: #999999;
-  font-size: 14px;
-  line-height: 24px;
-  font-weight: normal;
-}
-
 .search-form input {
   color: #323232;
   font-size: 16px;
@@ -307,6 +299,13 @@ html {
   margin: 20px 15px;
   border: 1px solid #d3d3d2;
   border-radius: 4px;
+}
+
+.search-form input::placeholder {
+  color: #999999;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: normal;
 }
 
 .search-form input:hover {
@@ -575,7 +574,6 @@ html {
 }
 
 .button-special-offer {
-  float: right;
   font-size: 18px;
   line-height: 24px;
   font-weight: bold;
@@ -668,7 +666,7 @@ html {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-bottom: 40px;
+  margin-bottom: 40px;  
 }
 
 .blog-news {
@@ -678,6 +676,7 @@ html {
   background-repeat: no-repeat;
   width: 560px;
   min-height: 220px;
+  border-radius: 10px;
 }
 
 .blog-news h2 {
@@ -685,13 +684,19 @@ html {
   font-size: 16px;
   line-height: 22px;
   font-weight: 500;
+  margin-left: 20px;
+  margin-top: 26px;
 }
 
 .blog-news-header {
+  display: block;
   color: #323232;
   font-size: 24px;
   line-height: 30px;
   font-weight: 700;
+  margin-left: 20px;
+  margin-top: 13px;
+  width: 300px;
 }
 
 .blog-news-header:hover,
@@ -704,17 +709,18 @@ html {
 .subscription-form {
   background-color: #ffffff;
   background-image: url("../img/post-layer.svg");
-
   width: 555px;
   min-height: 215px;
   padding-top: 5px;
   padding-left: 5px;
+  border-radius: 10px;
 }
 
 .subscription-form-background {
   width: 550px;
   min-height: 210px;
   background-color: #f8f7f4;
+  border-radius: 10px;
 }
 
 .subscription-form p {
@@ -722,6 +728,29 @@ html {
   color: #5a5a5a;
   font-size: 16px;
   line-height: 22px;
+  padding-top: 33px;
+  padding-left: 21px;
+  padding-right: 22px;
+}
+
+.form-mailing {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 38px;
+  padding-left: 20px;
+  padding-right: 21px;
+}
+
+.form-mailing input {
+  color: #323232;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: bold;
+  padding-left: 15px;
+  width: 368px;
+  height: 44px;
+  border: 1px solid rgba(178, 178, 178, 0.52);
 }
 
 .form-mailing input::placeholder {
@@ -731,11 +760,8 @@ html {
   font-weight: normal;
 }
 
-.form-mailing input {
-  color: #323232;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: bold;
+.form-mailing input:hover {
+  border: 2px solid rgba(154, 154, 154, 0.52);
 }
 
 .button-form-mailing {
@@ -743,9 +769,14 @@ html {
   line-height: 24px;
   font-weight: bold;
   color: #ffffff;
+  width: 129px;
+  height: 44px;
+  border-radius: 21px;
 }
 
+/* карта */
 .map-item {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
@@ -785,10 +816,126 @@ html {
   color: #ffffff;
 }
 
-/* временн скрытая форма обратной связи */
+/* форма обратной связи */
 .modal-feedback-form {
-  display: none;
+  /* display: none; */
+  position: absolute;
+  /* временно */
+  top: -5px;
+  left: 5px;
+  /* временно */
+  width: 478px;
+  min-height: 443px;
+  border-radius: 10px;
+  background-color: #f8f7f4;
 }
+
+.modal-feedback-form-slogan {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 28px;
+  margin: 0;
+  padding-left: 24px;
+  padding-top: 20px;
+  color:#323232;
+}
+
+.feedback-form {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 24px;
+  padding-top: 24px;
+}
+
+.feedback-item {
+  margin: 0;
+  padding-bottom: 20px;
+}
+
+.feedback-item-name,
+.feedback-item-mail {
+  color: #323232;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: bold;
+  width: 267px;
+  height: 44px;
+  padding-left: 15px;  
+  border: 1px solid #d3d3d2;
+  border-radius: 4px;  
+}
+
+.feedback-item-name::placeholder,
+.feedback-item-mail::placeholder {
+  color: #999999;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: normal;
+}
+
+.feedback-item-name:hover,
+.feedback-item-mail:hover {
+  border: 2px solid rgba(154, 154, 154, 0.52);
+}
+
+.feedback-item-text {
+  width: 428px;
+  min-height: 155px;
+  resize: none;
+  color: #323232;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: bold;
+  padding-left: 15px;
+  padding-top: 10px;
+  border: 1px solid #d3d3d2;
+  border-radius: 4px;
+}
+
+.feedback-item-text::placeholder {
+  color: #999999;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: normal;
+}
+
+.feedback-item-text:hover {
+  border: 2px solid rgba(154, 154, 154, 0.52);
+}
+
+.button-form-feedback {
+  margin-left: auto;
+  margin-right: 25px;
+  width: 139px;
+  height: 44px;
+  border-radius: 21px;
+}
+
+
+.modal-close {
+  position: absolute;
+  border: none;
+  background-color: transparent;
+  color: transparent;
+  width: 18px;
+  height: 17px;
+  background-image: url("../img/x-big.png");
+  right: 25px;
+  top: -30px; 
+
+}
+
+/*.modal-close::before {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 17px;
+  left: 400px;
+  top: 0px;
+  background-image: url("../img/x-big.png");
+  z-index: 5;
+}*/
 
 
 /* Футер */
@@ -1092,7 +1239,6 @@ footer {
 /* пагинатор */
 .catalog-paginator-list {
   list-style: none;
-  float: right;
 }
 
 .paginator-item a {
