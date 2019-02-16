@@ -288,6 +288,7 @@ html {
   background-color: #f8f7f4;
   border-radius: 5px;
 }
+
 .search-form input {
   color: #323232;
   font-size: 16px;
@@ -594,10 +595,10 @@ html {
   display: block;
   font-size: 24px;
   line-height: 30px;
-  font-weight: 500; 
-  text-align: left;      
+  font-weight: 500;
+  text-align: left;
   font-style: normal;
-  font-stretch: normal;  
+  font-stretch: normal;
   letter-spacing: normal;
   color: #323232;
   margin-bottom: 10px;
@@ -608,9 +609,9 @@ html {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
-  justify-content: space-between;  
+  justify-content: space-between;
   /*важно*/
-  width: 1146px;      
+  width: 1146px;
   /*важно*/
   padding: 0;
   padding-right: 20px;
@@ -619,8 +620,8 @@ html {
 
 .features-item {
   position: relative;
-  padding-left: 76px;  
-  padding-top: 12px;  
+  padding-left: 76px;
+  padding-top: 12px;
   padding-bottom: 10px;
   padding-right: 7px;
   width: 560px;
@@ -628,7 +629,7 @@ html {
   line-height: 22px;
   font-weight: normal;
   font-style: normal;
-  font-stretch: normal;  
+  font-stretch: normal;
   letter-spacing: normal;
   text-align: left;
   color: #323232;
@@ -666,7 +667,7 @@ html {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-bottom: 40px;  
+  margin-bottom: 40px;
 }
 
 .blog-news {
@@ -685,7 +686,8 @@ html {
   line-height: 22px;
   font-weight: 500;
   margin-left: 20px;
-  margin-top: 26px;
+  margin-top: 24px;
+  margin-bottom: 0;
 }
 
 .blog-news-header {
@@ -695,7 +697,7 @@ html {
   line-height: 30px;
   font-weight: 700;
   margin-left: 20px;
-  margin-top: 13px;
+  margin-top: 5px;
   width: 300px;
 }
 
@@ -728,9 +730,9 @@ html {
   color: #5a5a5a;
   font-size: 16px;
   line-height: 22px;
-  padding-top: 33px;
-  padding-left: 21px;
-  padding-right: 22px;
+  padding-top: 30px;
+  padding-left: 19px;
+  padding-right: 24px;
 }
 
 .form-mailing {
@@ -837,7 +839,7 @@ html {
   margin: 0;
   padding-left: 24px;
   padding-top: 20px;
-  color:#323232;
+  color: #323232;
 }
 
 .feedback-form {
@@ -861,9 +863,9 @@ html {
   font-weight: bold;
   width: 267px;
   height: 44px;
-  padding-left: 15px;  
+  padding-left: 15px;
   border: 1px solid #d3d3d2;
-  border-radius: 4px;  
+  border-radius: 4px;
 }
 
 .feedback-item-name::placeholder,
@@ -920,22 +922,11 @@ html {
   color: transparent;
   width: 18px;
   height: 17px;
-  background-image: url("../img/x-big.png");
+  background-image: url("../img/x-big.svg");
   right: 25px;
-  top: -30px; 
-
+  top: -30px;
+  cursor: pointer;
 }
-
-/*.modal-close::before {
-  content: "";
-  position: absolute;
-  width: 18px;
-  height: 17px;
-  left: 400px;
-  top: 0px;
-  background-image: url("../img/x-big.png");
-  z-index: 5;
-}*/
 
 
 /* Футер */
@@ -950,10 +941,10 @@ footer {
   /* margin-top: 7px; */
 }
 
-.footer-container {  
+.footer-container {
   padding-top: 7px;
   display: flex;
-  flex-wrap: wrap;  
+  flex-wrap: wrap;
   align-items: center;
 }
 
@@ -997,17 +988,17 @@ footer {
 }
 
 .footer-documents-list {
-  height: 40px;  
-  flex-direction: column;  
+  height: 40px;
+  flex-direction: column;
   justify-content: space-between;
 }
 
-.footer-documents-list a{
+.footer-documents-list a {
   font-weight: normal;
-  margin-right: 32px;  
+  margin-right: 32px;
 }
 
-.footer-documents-item:first-child a{
+.footer-documents-item:first-child a {
   font-weight: bold;
 }
 
@@ -1034,6 +1025,8 @@ footer {
   padding: 0;
 }
 
+
+
 /* стилис catalog.html */
 /* активный элемент главного меню Каталог */
 .site-nav-active-link {
@@ -1058,10 +1051,130 @@ footer {
   margin-right: 5px;
 }
 
-/* временно скрытый попап корзины */
-.section-basket {
-  display: none;
+/* попап корзины */
+.basket {
+  /* display: none; */
+  position: absolute;
+  right: 10px;
+  top: 31px;
 }
+
+.site-nav-other>li:hover .basket {
+  display: block;
+}
+
+.section-basket {
+  width: 540px;
+  margin-top: 5px;
+  border-radius: 5px;
+  box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
+  background-color: #f8f7f4;
+}
+
+.basket-list {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding-top: 3px;
+  padding-right: 21px;
+  padding-bottom: 30px;
+}
+
+.basket-list a {
+  display: flex;
+  /* justify-content: space-around; */  
+  padding: 0;
+  margin: 0;
+  padding-top: 20px;
+  color: #323232;
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: normal;
+  text-align: left;
+}
+
+.basket-list span {
+  padding-top: 7px;
+}
+
+.basket-item-image {
+  height: 33px;
+  width: 46px;
+  padding-right: 13px;
+}
+
+.basket-item-name {
+  display: inline-block;
+  width: 250px;
+  padding-right: 33px;
+}
+
+.basket-item-weight {
+  padding-right: 3px;
+}
+
+.basket-list::after {
+  position: absolute;
+  content: "";
+  left: 15px;
+  bottom: 14px;
+  width: 510px;
+  height: 1px;
+  background-color: rgba(53, 53, 53, .2);
+}
+
+.basket-item-price {
+  padding-left: 3px;
+  color: #999999;
+  padding-right: 27px;
+}
+
+.basket-itog {
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;  
+  letter-spacing: normal;  
+  color: #323232;
+
+  margin: 0;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  text-align: right;
+}
+
+.button-modal-basket-list {
+  font-size: 18px;
+  line-height: 24px;
+  margin-left: 355px;
+  margin-right: 16px;  
+  margin-bottom: 21px;
+  padding-left: -2px;
+  width: 170px;  
+  height: 44px;
+  border-radius: 21px;  
+}
+
+.delete-item {
+  position: absolute;
+  border: none;
+  background-color: transparent;
+  color: transparent;
+  width: 11px;
+  height: 11px;
+  background-image: url("../img/x-small.svg");
+  left: -20px;
+  top: 28px;
+  cursor: pointer;
+
+}
+
+
 
 /* main ctalog.html */
 /* Заголовок h1 */

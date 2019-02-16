@@ -106,37 +106,42 @@
             <span>2 товара</span>
           </a>
           <!-- Всплывающая корзина -->
+          <div class="basket">
           <section class="section-basket">
-            <h2 class="visually-hiden">Список товаров в корзине</h2>
+            <h2 class="visually-hidden">Список товаров в корзине</h2>
             <ul class="basket-list">
               <li class="basket-item">
                 <a href="#">
-                  <img src="img/ice-cream-icon-basket-1.png" alt="Пломбир с апельсиновым джемом" width="33" height="33">
+                  <img class="basket-item-image" src="img/ice-cream-icon-basket-1.png" alt="Пломбир с апельсиновым джемом" width="33" height="33">
                   <span class="basket-item-name">Пломбир с апельсиновым джемом</span>
                   <span class="basket-item-weight">1,5 кг</span>
-                  <span class="basket-item-x visually-hiden"> по цене за килограмм </span>
+                  <span class="basket-item-cross"> &times </span>
+                  <span class="basket-item-x visually-hidden"> по цене за килограмм </span>
                   <span class="basket-item-price">200 руб.</span>
-                  <span class="basket-item-total visually-hiden"> итого </span>
+                  <span class="basket-item-total visually-hidden"> итого </span>
                   <span class="basket-item-total-price">300 руб.</span>
                 </a>
-                <button type="button" class="delete-item visually-hidden">Удалить данную позицию</button>
+                <button type="button" class="delete-item">Удалить данную позицию</button>
               </li>
               <li class="basket-item">
                 <a href="#">
-                  <img src="img/ice-cream-icon-basket-2.png" alt="Клубничный пломбир с присыпкой из белого шоколада"
+                  <img class="basket-item-image" src="img/ice-cream-icon-basket-2.png" alt="Клубничный пломбир с присыпкой из белого шоколада"
                     width="33" height="33">
                   <span class="basket-item-name">Клубничный пломбир с присыпкой из белого шоколада</span>
                   <span class="basket-item-weight">1,5 кг</span>
-                  <span class="basket-item-x visually-hiden"> по цене за килограмм </span>
+                  <span class="basket-item-cross"> &times </span>
+                  <span class="basket-item-x visually-hidden"> по цене за килограмм </span>
                   <span class="basket-item-price">300 руб.</span>
-                  <span class="basket-item-total visually-hiden"> итого </span>
+                  <span class="basket-item-total visually-hidden"> итого </span>
                   <span class="basket-item-total-price">450 руб.</span>
                 </a>
-                <button type="button" class="delete-item visually-hidden">Удалить данную позицию</button>
+                <button type="button" class="delete-item">Удалить данную позицию</button>
               </li>
             </ul>
+            <p class="basket-itog">Итого: 750 руб.</p>
             <button type="button" class="button button-modal-basket-list">Оформить заказ</button>
           </section>
+        </div>
         </li>
       </ul>
     </nav>
