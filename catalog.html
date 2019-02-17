@@ -107,41 +107,42 @@
           </a>
           <!-- Всплывающая корзина -->
           <div class="basket">
-          <section class="section-basket">
-            <h2 class="visually-hidden">Список товаров в корзине</h2>
-            <ul class="basket-list">
-              <li class="basket-item">
-                <a href="#">
-                  <img class="basket-item-image" src="img/ice-cream-icon-basket-1.png" alt="Пломбир с апельсиновым джемом" width="33" height="33">
-                  <span class="basket-item-name">Пломбир с апельсиновым джемом</span>
-                  <span class="basket-item-weight">1,5 кг</span>
-                  <span class="basket-item-cross"> &times </span>
-                  <span class="basket-item-x visually-hidden"> по цене за килограмм </span>
-                  <span class="basket-item-price">200 руб.</span>
-                  <span class="basket-item-total visually-hidden"> итого </span>
-                  <span class="basket-item-total-price">300 руб.</span>
-                </a>
-                <button type="button" class="delete-item">Удалить данную позицию</button>
-              </li>
-              <li class="basket-item">
-                <a href="#">
-                  <img class="basket-item-image" src="img/ice-cream-icon-basket-2.png" alt="Клубничный пломбир с присыпкой из белого шоколада"
-                    width="33" height="33">
-                  <span class="basket-item-name">Клубничный пломбир с присыпкой из белого шоколада</span>
-                  <span class="basket-item-weight">1,5 кг</span>
-                  <span class="basket-item-cross"> &times </span>
-                  <span class="basket-item-x visually-hidden"> по цене за килограмм </span>
-                  <span class="basket-item-price">300 руб.</span>
-                  <span class="basket-item-total visually-hidden"> итого </span>
-                  <span class="basket-item-total-price">450 руб.</span>
-                </a>
-                <button type="button" class="delete-item">Удалить данную позицию</button>
-              </li>
-            </ul>
-            <p class="basket-itog">Итого: 750 руб.</p>
-            <button type="button" class="button button-modal-basket-list">Оформить заказ</button>
-          </section>
-        </div>
+            <section class="section-basket">
+              <h2 class="visually-hidden">Список товаров в корзине</h2>
+              <ul class="basket-list">
+                <li class="basket-item">
+                  <a href="#">
+                    <img class="basket-item-image" src="img/ice-cream-icon-basket-1.png" alt="Пломбир с апельсиновым джемом"
+                      width="33" height="33">
+                    <span class="basket-item-name">Пломбир с апельсиновым джемом</span>
+                    <span class="basket-item-weight">1,5 кг</span>
+                    <span class="basket-item-cross"> &times; </span>
+                    <span class="basket-item-x visually-hidden"> по цене за килограмм </span>
+                    <span class="basket-item-price">200 руб.</span>
+                    <span class="basket-item-total visually-hidden"> итого </span>
+                    <span class="basket-item-total-price">300 руб.</span>
+                  </a>
+                  <button type="button" class="delete-item">Удалить данную позицию</button>
+                </li>
+                <li class="basket-item">
+                  <a href="#">
+                    <img class="basket-item-image" src="img/ice-cream-icon-basket-2.png" alt="Клубничный пломбир с присыпкой из белого шоколада"
+                      width="33" height="33">
+                    <span class="basket-item-name">Клубничный пломбир с присыпкой из белого шоколада</span>
+                    <span class="basket-item-weight">1,5 кг</span>
+                    <span class="basket-item-cross"> &times; </span>
+                    <span class="basket-item-x visually-hidden"> по цене за килограмм </span>
+                    <span class="basket-item-price">300 руб.</span>
+                    <span class="basket-item-total visually-hidden"> итого </span>
+                    <span class="basket-item-total-price">450 руб.</span>
+                  </a>
+                  <button type="button" class="delete-item">Удалить данную позицию</button>
+                </li>
+              </ul>
+              <p class="basket-itog">Итого: 750 руб.</p>
+              <button type="button" class="button button-modal-basket-list">Оформить заказ</button>
+            </section>
+          </div>
         </li>
       </ul>
     </nav>
@@ -152,8 +153,8 @@
   </header>
 
   <!-- Мейн -->
-  <main class="container-main container">
-    <div class="wraper-header-menu">
+  <main class="container-main">
+    <div class="wraper-header-menu container">
       <h1 class="main-head-catalog">Сливочное мороженое</h1>
       <!-- Навигационная панель магазина -->
       <nav class="shop-menu">
@@ -167,7 +168,7 @@
     </div>
 
     <!-- Секция фильтров -->
-    <section class="form-filters">
+    <section class="form-filters container">
       <h2 class="visually-hidden">Форма фильтров</h2>
       <form class="filter-form" action="#" method="GET">
         <fieldset class=filter-sort>
@@ -239,17 +240,19 @@
       <h2 class="visually-hidden">Каталог товаров</h2>
       <ul class="catalog-product">
         <!-- Карточка товара -->
-        <li class="product-item">
-          <h3>
-            <a class="product-item-title" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
-          </h3>
-          <a class="product-item-image" href="#">
-            <img src="img/icecream1.png" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267">
-          </a>
-          <p class="product-item-price">
-            <b class="product-item-money">310 Р</b>
-            <span class="product-item-weight">/кг</span>
-          </p>
+        <li class="product-item">                
+            <h3>
+              <a class="product-item-title" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+            </h3>
+            <a class="product-item-image" href="#">
+              <img src="img/icecream1.png" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267"
+                height="267">
+            </a>
+            <p class="product-item-price">
+              <b class="product-item-money">310 &#8381;</b>
+              <span class="product-item-weight">/кг</span>
+            </p>
+            <button class="button button-quick-view">Быстрый просмотр</button>                
         </li>
         <!-- Карточка товара -->
         <li class="product-item">
@@ -260,9 +263,10 @@
             <img src="img/icecream2.png" alt="Сливочно-кофейное с кусочками шоколада" width="267" height="267">
           </a>
           <p class="product-item-price">
-            <b class="product-item-money">380 Р</b>
+            <b class="product-item-money">380 &#8381;</b>
             <span class="product-item-weight">/кг</span>
           </p>
+          <button class="button button-quick-view">Быстрый просмотр</button> 
         </li>
         <!-- Карточка товара -->
         <li class="product-item">
@@ -273,9 +277,10 @@
             <img src="img/icecream3.png" alt="Сливочно-клубничное с присыпкой из белого шоколада" width="267" height="267">
           </a>
           <p class="product-item-price">
-            <b class="product-item-money">355 Р</b>
+            <b class="product-item-money">355 &#8381;</b>
             <span class="product-item-weight">/кг</span>
           </p>
+          <button class="button button-quick-view">Быстрый просмотр</button> 
         </li>
         <!-- Карточка товара -->
         <li class="product-item">
@@ -286,9 +291,10 @@
             <img src="img/icecream4.png" alt="Сливочное крем-брюле с карамельной подливкой" width="267" height="267">
           </a>
           <p class="product-item-price">
-            <b class="product-item-money">415 Р</b>
+            <b class="product-item-money">415 &#8381;</b>
             <span class="product-item-weight">/кг</span>
           </p>
+          <button class="button button-quick-view">Быстрый просмотр</button> 
         </li>
         <!-- Карточка товара -->
         <li class="product-item">
@@ -299,9 +305,10 @@
             <img src="img/icecream5.png" alt="Сливочное с брусничным джемом" width="267" height="267">
           </a>
           <p class="product-item-price">
-            <b class="product-item-money">325 Р</b>
+            <b class="product-item-money">325 &#8381;</b>
             <span class="product-item-weight">/кг</span>
           </p>
+          <button class="button button-quick-view">Быстрый просмотр</button> 
         </li>
         <!-- Карточка товара -->
         <li class="product-item">
@@ -312,9 +319,10 @@
             <img src="img/icecream6.png" alt="Сливочно-черничное с цельными ягодами черники" width="267" height="267">
           </a>
           <p class="product-item-price">
-            <b class="product-item-money">410 Р</b>
+            <b class="product-item-money">410 &#8381;</b>
             <span class="product-item-weight">/кг</span>
           </p>
+          <button class="button button-quick-view">Быстрый просмотр</button> 
         </li>
         <!-- Карточка товара -->
         <li class="product-item">
@@ -325,9 +333,10 @@
             <img src="img/icecream7.png" alt="Сливочно-лимонное с карамельной присыпкой" width="267" height="267">
           </a>
           <p class="product-item-price">
-            <b class="product-item-money">375 Р</b>
+            <b class="product-item-money">375 &#8381;</b>
             <span class="product-item-weight">/кг</span>
           </p>
+          <button class="button button-quick-view">Быстрый просмотр</button> 
         </li>
         <!-- Карточка товара -->
         <li class="product-item">
@@ -338,9 +347,10 @@
             <img src="img/icecream8.png" alt="Сливочное с шоколадной стружкой" width="267" height="267">
           </a>
           <p class="product-item-price">
-            <b class="product-item-money">320 Р</b>
+            <b class="product-item-money">320 &#8381;</b>
             <span class="product-item-weight">/кг</span>
           </p>
+          <button class="button button-quick-view">Быстрый просмотр</button> 
         </li>
         <!-- Карточка товара -->
         <li class="product-item">
@@ -351,9 +361,10 @@
             <img src="img/icecream9.png" alt="Сливочно-ванильное с кусочками шоколада" width="267" height="267">
           </a>
           <p class="product-item-price">
-            <b class="product-item-money">440 Р</b>
+            <b class="product-item-money">440 &#8381;</b>
             <span class="product-item-weight">/кг</span>
           </p>
+          <button class="button button-quick-view">Быстрый просмотр</button> 
         </li>
         <!-- Карточка товара -->
         <li class="product-item">
@@ -364,9 +375,10 @@
             <img src="img/icecream10.png" alt="Сливочноe с ментоловым сиропом" width="267" height="267">
           </a>
           <p class="product-item-price">
-            <b class="product-item-money">435 Р</b>
+            <b class="product-item-money">435 &#8381;</b>
             <span class="product-item-weight">/кг</span>
           </p>
+          <button class="button button-quick-view">Быстрый просмотр</button> 
         </li>
         <!-- Карточка товара -->
         <li class="product-item">
@@ -377,9 +389,10 @@
             <img src="img/icecream11.png" alt="Сливочное с кусочками черного шоколада" width="267" height="267">
           </a>
           <p class="product-item-price">
-            <b class="product-item-money">355 Р</b>
+            <b class="product-item-money">355 &#8381;</b>
             <span class="product-item-weight">/кг</span>
           </p>
+          <button class="button button-quick-view">Быстрый просмотр</button> 
         </li>
         <!-- Карточка товара -->
         <li class="product-item">
@@ -393,6 +406,7 @@
             <b class="product-item-money">420 Р</b>
             <span class="product-item-weight">/кг</span>
           </p>
+          <button class="button button-quick-view">Быстрый просмотр</button> 
         </li>
       </ul>
 
