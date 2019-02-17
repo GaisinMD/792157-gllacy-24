@@ -146,6 +146,7 @@ html {
   position: absolute;
   top: 25px;
   left: -5px;
+  z-index: 1;
 }
 
 .site-nav-main>li:hover .submenu-catalog {
@@ -166,7 +167,7 @@ html {
 
 .catalog-item {
   /* важно */
-  min-width: 143px;
+  min-width: 143px;  
   /* важно */
 }
 
@@ -276,6 +277,7 @@ html {
   position: absolute;
   right: 10px;
   top: 31px;
+  z-index: 1;
 }
 
 .site-nav-other>li:hover .search {
@@ -346,6 +348,7 @@ html {
   right: 10px;
   top: 31px;
   display: none;
+  z-index: 1;
 }
 
 .site-nav-other>li:hover .login {
@@ -846,6 +849,7 @@ html {
   min-height: 443px;
   border-radius: 10px;
   background-color: #f8f7f4;
+  z-index: 1;
 }
 
 .modal-feedback-form-slogan {
@@ -960,11 +964,8 @@ html {
 footer {
   color: #ffffff;
   font-size: 13px;
-  line-height: 18px;
-  width: 1200px;
-  min-height: 103px;
-  margin-left: auto;
-  margin-right: auto;
+  line-height: 18px;  
+  min-height: 103px;  
   /* margin-top: 7px; */
 }
 
@@ -1020,6 +1021,7 @@ footer {
   /* Важно */
   flex-direction: column;
   justify-content: space-between;
+  position: relative;
 }
 
 .footer-documents-list a {
@@ -1029,6 +1031,18 @@ footer {
 
 .footer-documents-item:first-child a {
   font-weight: bold;
+}
+
+.footer-documents-item:first-child::before {
+  position: absolute;
+  content: "";
+  width: 15px;
+  height: 13px;
+  background-image: url("../img/heart.svg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  left: -22px;
+  top: 2px;
 }
 
 .footer-documents-list a:hover,
@@ -1085,6 +1099,7 @@ footer {
   position: absolute;
   right: 10px;
   top: 31px;
+  z-index: 1;
 }
 
 .site-nav-other>li:hover .basket {
@@ -1104,9 +1119,14 @@ footer {
   display: flex;
   flex-direction: column;
   list-style: none;
-  padding-top: 3px;
-  padding-right: 21px;
+  padding-left: 20px;
+  padding-top: 3px;    
   padding-bottom: 30px;
+}
+
+.basket-item {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .basket-list a {
@@ -1114,6 +1134,7 @@ footer {
   padding: 0;
   margin: 0;
   padding-top: 20px;
+  padding-right: 32px;
   color: #323232;
   font-size: 13px;
   line-height: 16px;
@@ -1124,10 +1145,6 @@ footer {
   text-align: left;
 }
 
-.basket-list span {
-  padding-top: 7px;
-}
-
 .basket-item-image {
   height: 33px;
   width: 46px;
@@ -1136,12 +1153,39 @@ footer {
 
 .basket-item-name {
   display: inline-block;
-  width: 250px;
-  padding-right: 33px;
+  padding-top: 7px;
+  width: 216px;  
 }
 
-.basket-item-weight {
-  padding-right: 3px;
+.basket-weight-price {
+  padding-top: 27px;
+  color: #323232;
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: normal;
+}
+
+.basket-item-price {
+  color: #999999;
+  padding-right: 25px;
+}
+
+.delete-item {
+  border: none;
+  background-color: transparent;
+  color: transparent;
+  width: 9px;
+  height: 11px;
+  background-image: url("../img/x-small.svg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  margin-right: 9px;
+  margin-top: 27px;
+  cursor: pointer;
+  order: -1;
 }
 
 .basket-list::after {
@@ -1154,10 +1198,10 @@ footer {
   background-color: rgba(53, 53, 53, .2);
 }
 
-.basket-item-price {
-  padding-left: 3px;
-  color: #999999;
-  padding-right: 27px;
+.basket-bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 .basket-itog {
@@ -1168,7 +1212,6 @@ footer {
   font-stretch: normal;  
   letter-spacing: normal;  
   color: #323232;
-
   margin: 0;
   margin-right: 15px;
   margin-bottom: 15px;
@@ -1178,28 +1221,13 @@ footer {
 .button-modal-basket-list {
   font-size: 18px;
   line-height: 24px;
-  margin-left: 355px;
+  margin-left: auto;
   margin-right: 16px;  
   margin-bottom: 21px;
   width: 170px;  
   min-height: 44px;
   border-radius: 21px;  
 }
-
-.delete-item {
-  position: absolute;
-  border: none;
-  background-color: transparent;
-  color: transparent;
-  width: 11px;
-  height: 11px;
-  background-image: url("../img/x-small.svg");
-  left: -20px;
-  top: 28px;
-  cursor: pointer;
-}
-
-
 
 /* main ctalog.html */
 /* Заголовок h1 */

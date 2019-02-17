@@ -15,7 +15,7 @@
     <!-- Навигационная панель -->
     <nav class="main-navigation">
       <!-- Логотип сайта -->
-      <a class="main-logo">
+      <a class="main-logo" href="index.html">
         <img src="img/logo.svg" alt="Логотип Gllacy Shop" width="154" height="64">
       </a>
       <!-- Меню навигации-левая часть -->
@@ -115,13 +115,15 @@
                     <img class="basket-item-image" src="img/ice-cream-icon-basket-1.png" alt="Пломбир с апельсиновым джемом"
                       width="33" height="33">
                     <span class="basket-item-name">Пломбир с апельсиновым джемом</span>
+                  </a>
+                  <span class="basket-weight-price">
                     <span class="basket-item-weight">1,5 кг</span>
                     <span class="basket-item-cross"> &times; </span>
                     <span class="basket-item-x visually-hidden"> по цене за килограмм </span>
                     <span class="basket-item-price">200 руб.</span>
                     <span class="basket-item-total visually-hidden"> итого </span>
                     <span class="basket-item-total-price">300 руб.</span>
-                  </a>
+                  </span>
                   <button type="button" class="delete-item">Удалить данную позицию</button>
                 </li>
                 <li class="basket-item">
@@ -129,18 +131,22 @@
                     <img class="basket-item-image" src="img/ice-cream-icon-basket-2.png" alt="Клубничный пломбир с присыпкой из белого шоколада"
                       width="33" height="33">
                     <span class="basket-item-name">Клубничный пломбир с присыпкой из белого шоколада</span>
+                  </a>
+                  <span class="basket-weight-price">
                     <span class="basket-item-weight">1,5 кг</span>
                     <span class="basket-item-cross"> &times; </span>
                     <span class="basket-item-x visually-hidden"> по цене за килограмм </span>
                     <span class="basket-item-price">300 руб.</span>
                     <span class="basket-item-total visually-hidden"> итого </span>
                     <span class="basket-item-total-price">450 руб.</span>
-                  </a>
+                  </span>
                   <button type="button" class="delete-item">Удалить данную позицию</button>
                 </li>
               </ul>
-              <p class="basket-itog">Итого: 750 руб.</p>
-              <button type="button" class="button button-modal-basket-list">Оформить заказ</button>
+              <div class="basket-bottom">
+                <p class="basket-itog">Итого: 750 руб.</p>
+                <button type="button" class="button button-modal-basket-list">Оформить заказ</button>
+              </div>
             </section>
           </div>
         </li>
@@ -240,19 +246,18 @@
       <h2 class="visually-hidden">Каталог товаров</h2>
       <ul class="catalog-product">
         <!-- Карточка товара -->
-        <li class="product-item">                
-            <h3>
-              <a class="product-item-title" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
-            </h3>
-            <a class="product-item-image" href="#">
-              <img src="img/icecream1.png" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267"
-                height="267">
-            </a>
-            <p class="product-item-price">
-              <b class="product-item-money">310 &#8381;</b>
-              <span class="product-item-weight">/кг</span>
-            </p>
-            <button class="button button-quick-view">Быстрый просмотр</button>                
+        <li class="product-item">
+          <h3>
+            <a class="product-item-title" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+          </h3>
+          <a class="product-item-image" href="#">
+            <img src="img/icecream1.png" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267">
+          </a>
+          <p class="product-item-price">
+            <b class="product-item-money">310 &#8381;</b>
+            <span class="product-item-weight">/кг</span>
+          </p>
+          <button class="button button-quick-view">Быстрый просмотр</button>
         </li>
         <!-- Карточка товара -->
         <li class="product-item">
@@ -266,7 +271,7 @@
             <b class="product-item-money">380 &#8381;</b>
             <span class="product-item-weight">/кг</span>
           </p>
-          <button class="button button-quick-view">Быстрый просмотр</button> 
+          <button class="button button-quick-view">Быстрый просмотр</button>
         </li>
         <!-- Карточка товара -->
         <li class="product-item">
@@ -280,7 +285,7 @@
             <b class="product-item-money">355 &#8381;</b>
             <span class="product-item-weight">/кг</span>
           </p>
-          <button class="button button-quick-view">Быстрый просмотр</button> 
+          <button class="button button-quick-view">Быстрый просмотр</button>
         </li>
         <!-- Карточка товара -->
         <li class="product-item">
@@ -294,7 +299,7 @@
             <b class="product-item-money">415 &#8381;</b>
             <span class="product-item-weight">/кг</span>
           </p>
-          <button class="button button-quick-view">Быстрый просмотр</button> 
+          <button class="button button-quick-view">Быстрый просмотр</button>
         </li>
         <!-- Карточка товара -->
         <li class="product-item">
@@ -308,7 +313,7 @@
             <b class="product-item-money">325 &#8381;</b>
             <span class="product-item-weight">/кг</span>
           </p>
-          <button class="button button-quick-view">Быстрый просмотр</button> 
+          <button class="button button-quick-view">Быстрый просмотр</button>
         </li>
         <!-- Карточка товара -->
         <li class="product-item">
@@ -322,7 +327,7 @@
             <b class="product-item-money">410 &#8381;</b>
             <span class="product-item-weight">/кг</span>
           </p>
-          <button class="button button-quick-view">Быстрый просмотр</button> 
+          <button class="button button-quick-view">Быстрый просмотр</button>
         </li>
         <!-- Карточка товара -->
         <li class="product-item">
@@ -336,7 +341,7 @@
             <b class="product-item-money">375 &#8381;</b>
             <span class="product-item-weight">/кг</span>
           </p>
-          <button class="button button-quick-view">Быстрый просмотр</button> 
+          <button class="button button-quick-view">Быстрый просмотр</button>
         </li>
         <!-- Карточка товара -->
         <li class="product-item">
@@ -350,7 +355,7 @@
             <b class="product-item-money">320 &#8381;</b>
             <span class="product-item-weight">/кг</span>
           </p>
-          <button class="button button-quick-view">Быстрый просмотр</button> 
+          <button class="button button-quick-view">Быстрый просмотр</button>
         </li>
         <!-- Карточка товара -->
         <li class="product-item">
@@ -364,7 +369,7 @@
             <b class="product-item-money">440 &#8381;</b>
             <span class="product-item-weight">/кг</span>
           </p>
-          <button class="button button-quick-view">Быстрый просмотр</button> 
+          <button class="button button-quick-view">Быстрый просмотр</button>
         </li>
         <!-- Карточка товара -->
         <li class="product-item">
@@ -378,7 +383,7 @@
             <b class="product-item-money">435 &#8381;</b>
             <span class="product-item-weight">/кг</span>
           </p>
-          <button class="button button-quick-view">Быстрый просмотр</button> 
+          <button class="button button-quick-view">Быстрый просмотр</button>
         </li>
         <!-- Карточка товара -->
         <li class="product-item">
@@ -392,7 +397,7 @@
             <b class="product-item-money">355 &#8381;</b>
             <span class="product-item-weight">/кг</span>
           </p>
-          <button class="button button-quick-view">Быстрый просмотр</button> 
+          <button class="button button-quick-view">Быстрый просмотр</button>
         </li>
         <!-- Карточка товара -->
         <li class="product-item">
@@ -406,7 +411,7 @@
             <b class="product-item-money">420 Р</b>
             <span class="product-item-weight">/кг</span>
           </p>
-          <button class="button button-quick-view">Быстрый просмотр</button> 
+          <button class="button button-quick-view">Быстрый просмотр</button>
         </li>
       </ul>
 
@@ -423,8 +428,8 @@
   </main>
 
   <!-- Мейн футер -->
-  <footer>
-    <div class="footer-container container">
+  <footer class="container">
+    <div class="footer-container">
       <!-- Соцсети -->
       <div class="footer-social">
         <ul class="footer-social-list">
