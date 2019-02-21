@@ -901,10 +901,7 @@ html {
 }
 
 .adress-container {
-  /* position: absolute; */
   position: relative;
-  /* height: 20px; */
-  /* background-color: #000000; */
 }
 
 .adress-item {
@@ -970,13 +967,23 @@ html {
 }
 
 /* форма обратной связи */
-.modal-feedback-form {
+.overlay-modal {
   display: none;
   position: fixed;
-  /* временно */
-  top: 5px;
-  left: 5px;
-  /* временно */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background-color: rgba(0,0,0,0.5); 
+}
+
+.modal-feedback-form {  
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -221px;
+  margin-left: -239px;
   width: 478px;
   min-height: 443px;
   border-radius: 10px;
@@ -1137,9 +1144,15 @@ footer {
   border-radius: 50%;
 }
 
-.footer-social-item:hover svg {
-  background-color: rgba(255, 255, 255, 0.5);
+.footer-social-item:hover path,
+.footer-social-item:focus path {
+  fill: #ffffff;
 }
+
+.footer-social-item:active path {
+  fill: #e9e9e9;
+}
+
 
 /* documents */
 .footer-documents {
@@ -1399,7 +1412,6 @@ footer {
   position: relative;
 }
 
-
 .shop-menu {
   position: absolute;
   top: -20px;
@@ -1465,7 +1477,8 @@ footer {
   background-color: rgba(255, 255, 255, 0.2);
   min-height: 37px;
   border-radius: 19px;
-  margin-bottom: 37px;
+  margin-bottom: 37px;  
+  cursor: pointer;
 }
 
 .filter-form legend {
@@ -1494,13 +1507,23 @@ footer {
   background-repeat: no-repeat;
   background-position: 100% 4px;
   padding-right: 17px;
-}
-
-.filter-sort:hover {
-  background: #ffffff;
+  cursor: pointer;
 }
 
 .filter-sort:hover select {
+  border: none;
+  color: #000000;
+  background-image: url("../img/icon-down-dir.svg");
+  background-repeat: no-repeat;
+  background-position: 100% 3px;
+}
+
+/* .filter-sort:focus-within { 
+  background: #ffffff;
+} */
+
+.filter-sort:active select,
+.filter-sort:focus select {
   border: none;
   color: #000000;
   background: #ffffff;
@@ -1557,22 +1580,30 @@ footer {
   height: 22px;
   top: 8px;
   left: 35px;
-  background-image: url("../img/filter-button.svg");
-  background-repeat: no-repeat;
-  background-position: center top;
-  z-index: 2;
 }
 
-.filter-price .second-circle {
+.first-circle:hover,
+.first-circle:hover svg {
+  width: 22px;
+  height: 25px;
+  left: 34px;
+  top: 7px;
+}
+
+.filter-price .second-circle {  
   position: absolute;
   width: 20px;
   height: 22px;
   top: 8px;
   right: 65px;
-  background-image: url("../img/filter-button.svg");
-  background-repeat: no-repeat;
-  background-position: center top;
-  z-index: 2;
+}
+
+.second-circle:hover,
+.second-circle:hover svg {
+  width: 22px;
+  height: 25px;;
+  top: 7px;
+  right: 64px;
 }
 
 /* Жирность */
@@ -1594,7 +1625,7 @@ footer {
 
 .list-filter-fat-item {
   position: relative;
-  padding-right: 17px;
+  padding-right: 17px;  
 }
 
 .list-filter-fat-item:last-child {
@@ -1606,6 +1637,7 @@ footer {
   line-height: 18px;
   font-weight: 500;
   padding-left: 32px;
+  cursor: pointer;  
 }
 
 .list-filter-fat-item label::before {
@@ -1614,12 +1646,30 @@ footer {
   width: 22px;
   height: 22px;
   border-radius: 50%;
-  border: 3px solid #ffffff;
+  border: 3px solid rgba(225, 225, 225, 0.8);
   left: 1px;
   top: -3px;
 }
 
+.list-filter-fat-item:hover label::before {
+  border: 3px solid #ffffff;
+}
+
+.list-filter-fat-item:disabled label::before {
+  border: 3px solid rgba(225, 225, 225, 0.4);
+}
+
 .list-filter-fat-item input:checked+label::before {
+  background-color: rgba(225, 225, 225, 0.8);
+  width: 17px;
+  height: 17px;
+  border: 5px solid #9db1a6;
+  box-shadow: 0px 0px 0px 3px rgba(225, 225, 225, 0.8);
+  left: 4px;
+  top: 0px;
+}
+
+.list-filter-fat-item:hover input:checked+label::before {
   background-color: #ffffff;
   width: 17px;
   height: 17px;
@@ -1661,6 +1711,7 @@ footer {
   line-height: 18px;
   font-weight: 500;
   padding-left: 32px;
+  cursor: pointer;
 }
 
 .list-filter-fill-item label::before {
@@ -1675,9 +1726,28 @@ footer {
   top: -3px;
 }
 
+.list-filter-fill-item:hover label::before {
+  background-image: url("../img/checkbox-hover.svg");
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
 .list-filter-fill-item input:checked+label::before {
   width: 27px;
   background-image: url("../img/checkbox-on.svg");
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
+.list-filter-fill-item:hover input:checked+label::before {
+  width: 27px;
+  background-image: url("../img/checkbox-on-hover.svg");
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
+.list-filter-fill-item:disabled label::before {
+  background-image: url("../img/checkbox-disabled.svg");
   background-repeat: no-repeat;
   background-position: center top;
 }
@@ -1697,6 +1767,7 @@ footer {
   vertical-align: middle;
 
   margin-bottom: 37px;
+  cursor: pointer;
 }
 
 .button-filter-form:hover,
@@ -1714,7 +1785,7 @@ footer {
 /* карточки товаров */
 .catalog {
   /* ВРЕМЕННАЯ ХРЕНЬ, ЕСТЬ ВОПРОС */
-  margin-top: -15px;
+  /* margin-top: -15px; */
 }
 
 .catalog-product {
@@ -1722,6 +1793,7 @@ footer {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
+  margin: 0;
   padding: 0;
   padding-bottom: 14px;
 }
