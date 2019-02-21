@@ -1626,7 +1626,7 @@ footer {
   border: 5px solid #9db1a6;
   box-shadow: 0px 0px 0px 3px #ffffff;
   left: 4px;
-  top: 0px;  
+  top: 0px;
 }
 
 /* Наполнители */
@@ -1670,16 +1670,16 @@ footer {
   height: 23px;
   background-image: url("../img/checkbox-off.svg");
   background-repeat: no-repeat;
-  background-position: center top;  
+  background-position: center top;
   left: -1px;
   top: -3px;
 }
 
 .list-filter-fill-item input:checked+label::before {
-  width: 27px;  
+  width: 27px;
   background-image: url("../img/checkbox-on.svg");
   background-repeat: no-repeat;
-  background-position: center top; 
+  background-position: center top;
 }
 
 /* кнопка формы */
@@ -1722,8 +1722,8 @@ footer {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  /* justify-content: space-between; */
   padding: 0;
+  padding-bottom: 14px;
 }
 
 .product-item {
@@ -1787,7 +1787,6 @@ footer {
   padding-bottom: 34px;
   padding-left: 6px;
   padding-right: 6px;
-  /* vertical-align: middle; */
 }
 
 .product-item-title {
@@ -1833,12 +1832,33 @@ footer {
 }
 
 /* пагинатор */
+.paginator-wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
+
 .catalog-paginator-list {
+  display: flex;
   list-style: none;
 }
 
+.paginator-item {
+  position: relative;
+}
+
 .paginator-item a {
+  display: block;
   text-decoration: none;
+  width: 27px;
+  height: 26px;
+  border-radius: 50%;
+  margin-right: 2px;
+  padding: 5px 8px;
+}
+
+.paginator-item:nth-child(6) a {
+  /* margin-right: 22px; */
 }
 
 .paginator-item a:hover,
@@ -1850,4 +1870,44 @@ footer {
 .paginator-item-current a {
   background-color: #ffffff;
   color: #000000;
+}
+
+.paginator-item-current a:hover,
+.paginator-item-current a:focus,
+.paginator-item-current a:active {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.paginator-item:first-child a,
+.paginator-item:last-child a {
+  color: transparent;
+  background-color: transparent;
+  width: 19px;
+}
+
+/* стрелки пагинатора */
+.paginator-item:first-child a::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 12px;
+  background-image: url("../img/icon-left-small.svg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  top: 9px;
+  left: -1px;
+  transform: scaleX(-1)
+}
+
+.paginator-item:last-child a::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 12px;
+  background-image: url("../img/icon-right-small.svg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  top: 10px;
+  right: 8px;
 }
