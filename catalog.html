@@ -187,20 +187,15 @@
         </nav>
       </div>
 
-      <!-- Нижняя часть хэдера - телефон и время -->
-      <div class="header-contacts">
-        <p class="header-contacts-time">С 10 до 20, ежедневно</p>
-        <a class="header-contacts-phone" href="tel:88124502525">8 812 450-25-25</a>
-      </div>
+
     </header>
 
 
     <!-- Мейн -->
     <main class="container-main container">
 
-      <!-- Блок заголовка и хлебных крошек навигационной панели магазина -->
-      <div class="wraper-header-menu">
-        <h1 class="main-head-catalog">Сливочное мороженое</h1>
+      <!-- Блок хлебных крошек навигационной панели магазина и секции с телефоном и временем-->
+      <div class="wraper-header-menu">        
         <!-- Навигационная панель магазина - хлебные крошки -->
         <nav class="shop-menu">
           <ul class="shop-menu-list">
@@ -210,7 +205,15 @@
             <li class="shop-menu-item shop-menu-item-current">Сливочное</li>
           </ul>
         </nav>
+        <!-- Секция - телефон и время -->
+        <div class="catalog-ahead-contacts">
+          <p class="ahead-contacts-time">С 10 до 20, ежедневно</p>
+          <a class="ahead-contacts-phone" href="tel:88124502525">8 812 450-25-25</a>
+        </div>
       </div>
+
+      <!-- ГЛАВНЫЙ заголовок -->
+      <h1 class="main-head-catalog">Сливочное мороженое</h1>
 
       <!-- Секция фильтров -->
       <section class="form-filters">
@@ -228,19 +231,29 @@
           </fieldset>
           <!-- Цены -->
           <fieldset class="filter-price">
-            <legend>Цена: 100 руб. – 500 руб.</legend>
-            <div class="slider"></div>
-            <div class="first-circle">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="23" viewBox="0 0 20 23">
-                <path opacity=".3" fill="#ABABAB" d="M10 20C4.477 20 0 15.522 0 10v2c0 5.522 4.477 10 10 10 5.522 0 10-4.478 10-10v-2c0 5.522-4.478 10-10 10z" />
-                <circle fill="#FFF" cx="10" cy="10" r="10" />
-                <circle fill="#ABABAB" cx="10" cy="10" r="2" /></svg>
+            <legend class="visually-hidden">Цена</legend>
+            <div class="filter-price-controls">
+              <label class="filter-min-price">Цена:
+                <input name="filter-min-price" type="text" value="100" disabled>руб.
+              </label>
+              <label class="filter-max-price">-
+                <input name="filter-max-price" type="text" value="500" disabled>руб.
+              </label>
             </div>
-            <div class="second-circle">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="23" viewBox="0 0 20 23">
-                <path opacity=".3" fill="#ABABAB" d="M10 20C4.477 20 0 15.522 0 10v2c0 5.522 4.477 10 10 10 5.522 0 10-4.478 10-10v-2c0 5.522-4.478 10-10 10z" />
-                <circle fill="#FFF" cx="10" cy="10" r="10" />
-                <circle fill="#ABABAB" cx="10" cy="10" r="2" /></svg>
+            <div class="slider-field">
+              <div class="slider"></div>
+              <div class="first-circle">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="23" viewBox="0 0 20 23">
+                  <path opacity=".3" fill="#ABABAB" d="M10 20C4.477 20 0 15.522 0 10v2c0 5.522 4.477 10 10 10 5.522 0 10-4.478 10-10v-2c0 5.522-4.478 10-10 10z" />
+                  <circle fill="#FFF" cx="10" cy="10" r="10" />
+                  <circle fill="#ABABAB" cx="10" cy="10" r="2" /></svg>
+              </div>
+              <div class="second-circle">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="23" viewBox="0 0 20 23">
+                  <path opacity=".3" fill="#ABABAB" d="M10 20C4.477 20 0 15.522 0 10v2c0 5.522 4.477 10 10 10 5.522 0 10-4.478 10-10v-2c0 5.522-4.478 10-10 10z" />
+                  <circle fill="#FFF" cx="10" cy="10" r="10" />
+                  <circle fill="#ABABAB" cx="10" cy="10" r="2" /></svg>
+              </div>
             </div>
           </fieldset>
           <!-- Жирность -->

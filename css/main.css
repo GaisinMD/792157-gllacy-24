@@ -73,7 +73,6 @@ html {
   background-image: linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
   -webkit-box-shadow: 0 1px 1px rgba(172, 16, 0, 1);
           box-shadow: 0 1px 1px rgba(172, 16, 0, 1);
-  font-family: Roboto;
   font-weight: bold;
   text-decoration: none;
   color: #ffffff;
@@ -119,7 +118,7 @@ html {
 
 /* Лого */
 .main-logo {
-  margin-right: 13px;
+  margin-right: 11px;
   line-height: 0;
   padding-top: 9px;
 }
@@ -584,35 +583,38 @@ html {
   fill: #000000;
 }
 
-/* Нижняя часть хэдера - телефон и время */
-.header-contacts {
+
+/* MAIN */
+/* Секция - телефон и время */
+.ahead-contacts {
   text-align: right;
 }
 
-.header-contacts-time {
+.ahead-contacts-time {
   margin: 0px;
   padding-bottom: 6px;
   font-size: 14px;
   line-height: 16px;
   font-weight: bold;
-  text-align: right;
+  /* text-align: right; */
   color: #ffffff;
 }
 
-.header-contacts-phone {
+.ahead-contacts-phone {
   font-size: 22px;
   line-height: 24px;
-  text-align: right;
+  /* text-align: right; */
   text-decoration: none;
 }
 
-.header-contacts-phone:hover,
-.header-contacts-phone:focus,
-.header-contacts-phone:active {
+.ahead-contacts-phone:hover,
+.ahead-contacts-phone:focus,
+.ahead-contacts-phone:active {
   color: #ffbc9e;
 }
 
-/* MAIN */
+
+
 /* Секция слайдов */
 .slides {
   position: relative;
@@ -714,12 +716,12 @@ html {
 /* Предзагрузка изображений в скрытые элементы для будущей плавной анимации */
 .site-wrapper::before {
   visibility: hidden;
-  background-image: url("img/slider-item2.png");
+  background-image: url("img/icecream-double-2.png");
 }
 
 .site-wrapper::after {
   visibility: hidden;
-  background-image: url("img/slider-item3.png");
+  background-image: url("img/icecream-double-3.png");
 }
 
 /* Секция специальных предложений */
@@ -784,17 +786,23 @@ html {
   line-height: 24px;
   font-weight: bold;
   color: #ffffff;
-
   min-height: 46px;
-  border-radius: 23px;
+  border-radius: 23px;  
+  padding-top: 8px;
+  margin-right: 21px;
+  margin-left: auto;  
+}
+
+.special-offers-item:nth-child(1) .button-special-offer { 
+  width: 166px;
   padding-left: 22px;
   padding-right: 24px;
-  padding-top: 8px;
+}
 
-  margin-right: 21px;
-
-  /* Из за IE */
-  float: right;  
+.special-offers-item:nth-child(2) .button-special-offer { 
+  width: 189px;
+  padding-left: 21px;
+  padding-right: 22px;
 }
 
 /* Секция хитов продаж */
@@ -1729,10 +1737,10 @@ html {
   line-height: 41px;
   color: #ffffff;
   -webkit-box-ordinal-group: 2;
-      -ms-flex-order: 1;
-          order: 1;
+  -ms-flex-order: 1;
+  order: 1;
   margin: 0;
-  margin-bottom: 49px;
+  margin-bottom: 25px;
 }
 
 /* Навигационная панель магазина - хлебные крошки */
@@ -1741,17 +1749,13 @@ html {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  position: relative;
+  flex-wrap: wrap;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;  
 }
 
 .shop-menu {
-  position: absolute;
-  top: -20px;
 }
 
 .shop-menu-list {
@@ -1765,6 +1769,7 @@ html {
   color: #ffffff;
   margin: 0;
   padding: 0;
+  padding-bottom: 3px;
 }
 
 .shop-menu-item {
@@ -1789,9 +1794,40 @@ html {
 }
 
 
+/* Секция - телефон и время */
+.catalog-ahead-contacts {
+  margin-left: auto;
+  text-align: right;
+}
+
+.ahead-contacts-time {
+  margin: 0px;
+  padding-bottom: 6px;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: bold;
+  /* text-align: right; */
+  color: #ffffff;
+}
+
+.ahead-contacts-phone {
+  font-size: 22px;
+  line-height: 24px;
+  /* text-align: right; */
+  text-decoration: none;
+}
+
+.ahead-contacts-phone:hover,
+.ahead-contacts-phone:focus,
+.ahead-contacts-phone:active {
+  color: #ffbc9e;
+}
+
+
+
 /* Секция фильтров */
 .form-filters {
-  margin-bottom: 0px;
+  margin-bottom: 37px;
 }
 
 .filter-form {
@@ -1799,12 +1835,16 @@ html {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   font-size: 14px;
   line-height: 18px;
   font-weight: 500;
   text-align: left;
   color: #ffffff;
+}
+
+.filter-form legend {
+  padding-left: 16px;  
 }
 
 .filter-form ul {
@@ -1815,23 +1855,18 @@ html {
   position: relative;
   margin: 0;
   padding: 0;
-  border: none;
-  background-color: rgba(255, 255, 255, 0.2);
-  min-height: 37px;
-  border-radius: 19px;
-  margin-bottom: 37px;
-  cursor: pointer;
-}
+  border: none;  
+  
+  cursor: pointer;  
+  min-height: 60px;  
 
-.filter-form legend {
-  position: absolute;
-  line-height: 16px;
-  top: -21px;
+  padding-top: 5px;
 }
 
 /* Сортировка */
 .filter-form .filter-sort {
-  margin-right: 14px;
+  margin-right: 16px;
+  margin-bottom: 15px;
 }
 
 .filter-sort select {
@@ -1840,8 +1875,8 @@ html {
   line-height: 18px;
   font-weight: 500;
   -moz-appearance: none;
-       appearance: none;
   -webkit-appearance: none;
+  appearance: none;  
   color: #ffffff;
   background: #9db1a6;
   background-image: url("../img/icon-down-dir-white.svg");
@@ -1853,6 +1888,7 @@ html {
   padding-left: 14px;
   border-radius: 19px;
   border: none;
+  min-height: 37px;  
 }
 
 .filter-sort select:hover {
@@ -1876,22 +1912,48 @@ html {
 
 /* Цена */
 .filter-form .filter-price {
-  position: relative;
-  width: 220px;
+  /* position: relative; */
+  /*  */
   margin-right: 14px;
-  padding-left: 42px;
-  padding-top: 16px;
+  margin-bottom: 15px;
+  padding-top: 0px;  
+  /* padding-left: 42px; */
+  /* padding-top: 16px; */
 }
 
-.filter-price legend {
-  left: 15px;
+.filter-price-controls {
+  padding-left: 15px;
+  padding-bottom: 5px;  
 }
+
+.filter-price-controls input {
+  border: none;
+  background-color: transparent;
+  color: #ffffff;
+  width: 30px;
+}
+
+.filter-max-price input {
+  padding-left: 2px;
+}
+
+.filter-price .slider-field {
+  width: 220px;
+  background: #9db1a6;
+  border-radius: 19px;  
+  padding-top: 17px;
+  padding-bottom: 16px;
+  padding-left: 42px; 
+}
+
+
 
 .filter-price .slider {
   position: relative;
   width: 107px;
   height: 4px;
   background-color: #ffffff;
+  border-radius: 19px;
 }
 
 .filter-price .slider::before {
@@ -1920,7 +1982,7 @@ html {
   position: absolute;
   width: 20px;
   height: 22px;
-  top: 8px;
+  top: 32px;
   left: 35px;
 }
 
@@ -1929,14 +1991,14 @@ html {
   width: 22px;
   height: 25px;
   left: 34px;
-  top: 7px;
+  top: 31px;
 }
 
 .filter-price .second-circle {
   position: absolute;
   width: 20px;
   height: 22px;
-  top: 8px;
+  top: 32px;
   right: 65px;
 }
 
@@ -1944,18 +2006,13 @@ html {
 .second-circle:hover svg {
   width: 22px;
   height: 25px;
-  ;
-  top: 7px;
+  top: 31px;
   right: 64px;
 }
 
 /* Жирность */
 .filter-form .filter-fat {
   width: 415px;
-}
-
-.filter-fat legend {
-  left: 15px;
 }
 
 .list-filter-fat {
@@ -1966,11 +2023,18 @@ html {
   padding: 0;
   padding-left: 15px;
   padding-top: 10px;
+  padding-bottom: 7px;
+  background: #9db1a6;
+  border-radius: 19px;
 }
 
 .list-filter-fat-item {
   position: relative;
-  padding-right: 19px;
+  padding-right: 20px;
+}
+
+.list-filter-fat-item {
+  padding-right: 18px;
 }
 
 .list-filter-fat-item:last-child {
@@ -1991,7 +2055,7 @@ html {
   width: 22px;
   height: 22px;
   border-radius: 50%;
-  border: 3px solid rgba(225, 225, 225, 0.8);
+  border: 3px solid #e6ebe7;
   left: 1px;
   top: -3px;
 }
@@ -2005,12 +2069,12 @@ html {
 }
 
 .list-filter-fat-item input:checked+label::before {
-  background-color: rgba(225, 225, 225, 0.8);
+  background-color: #e6ebe7;
   width: 17px;
   height: 17px;
   border: 5px solid #9db1a6;
-  -webkit-box-shadow: 0px 0px 0px 3px rgba(225, 225, 225, 0.8);
-          box-shadow: 0px 0px 0px 3px rgba(225, 225, 225, 0.8);
+  -webkit-box-shadow: 0px 0px 0px 3px #e6ebe7;
+          box-shadow: 0px 0px 0px 3px #e6ebe7;
   left: 4px;
   top: 0px;
 }
@@ -2033,10 +2097,6 @@ html {
   margin-right: 13px;
 }
 
-.filter-fill legend {
-  left: 15px;
-}
-
 .list-filter-fill {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2045,6 +2105,9 @@ html {
   padding: 0;
   padding-left: 15px;
   padding-top: 10px;
+  padding-bottom: 7px;
+  background: #9db1a6;
+  border-radius: 19px;
 }
 
 .list-filter-fill-item {
@@ -2075,6 +2138,20 @@ html {
   left: -1px;
   top: -3px;
 }
+
+.list-filter-fill-item:nth-of-type(3) label::before {
+  left: -4px;
+  top: -3px;
+}
+
+.list-filter-fill-item:nth-of-type(4) label::before {
+  left: -2px;  
+}
+
+.list-filter-fill-item:nth-of-type(5) label::before {
+  left: -4px;  
+}
+
 
 .list-filter-fill-item:hover label::before,
 .list-filter-fill-item input:focus+label::before {
@@ -2110,6 +2187,10 @@ html {
   min-height: 37px;
   border-radius: 28px;
   font: inherit;
+  padding: 0px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
 
   border: 2px solid #ffffff;
   background-color: rgba(255, 255, 255, 0.2);
@@ -2118,8 +2199,9 @@ html {
   text-align: center;
   vertical-align: middle;
 
-  margin-bottom: 37px;
   cursor: pointer;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
 }
 
 .button-filter-form:hover,
