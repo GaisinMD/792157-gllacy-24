@@ -22,3 +22,28 @@ window.addEventListener("keydown", function (evt) {
     }
   }
 });
+
+
+ymaps.ready(init);
+
+function init() {
+  myMap = new ymaps.Map("yandex-map", {
+      center: [59.938631, 30.323055],
+      zoom: 17,
+      controls: ['smallMapDefaultSet']
+    }),    
+
+    myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+      hintContent: 'Магазин мороженного Gllacy',
+      balloonContent: 'Добро пожаловать!'
+    }, 
+    {
+      iconLayout: 'default#image',
+      iconImageHref: 'img/pin.svg',
+      iconImageSize: [80, 140],
+      iconImageOffset: [-37, -140]
+    });
+
+  myMap.geoObjects
+    .add(myPlacemark);
+};
