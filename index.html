@@ -80,7 +80,6 @@
                 </svg>
               </a>
               <!-- Выпадающая форма поиска -->
-              <div class="search">
                 <section class="section-search">
                   <h2 class="visually-hidden">Поиск</h2>
                   <form class="search-form" action="#" method="POST">
@@ -88,7 +87,6 @@
                     <input type="text" id="search-item-id" name="search" placeholder="Чего ищем?">
                   </form>
                 </section>
-              </div>
             </li>
 
             <!-- Пункт пользовательского меню - Вход -->
@@ -102,7 +100,6 @@
                 </svg>
                 <span>Вход</span></a>
               <!-- Выпадающая форма логина -->
-              <div class="login">
                 <section class="section-login">
                   <h2 class="visually-hidden">Личный кабинет</h2>
                   <form class="login-form" action="#" method="POST">
@@ -121,7 +118,6 @@
                     </p>
                   </form>
                 </section>
-              </div>
             </li>
 
             <!-- Пункт пользовательского меню - Корзина -->
@@ -165,9 +161,9 @@
           <h2 class="visually-hidden">Слайды</h2>
           <!-- Переключатели (лейблы для радиобаттонов в начале кода) -->
           <div class="slides-controls">
-            <label for="product-1" class="slides-switch-item">Первый</label>
-            <label for="product-2" class="slides-switch-item">Второй</label>
-            <label for="product-3" class="slides-switch-item">Третий</label>
+            <label for="product-1">Первый</label>
+            <label for="product-2">Второй</label>
+            <label for="product-3">Третий</label>
           </div>
           <!-- Слайды -->
           <!-- Список -->
@@ -194,10 +190,8 @@
         <!-- Секция специальных предложений -->
         <section class="special-offers">
           <h2 class="visually-hidden">Специальные предложения</h2>
-
           <!-- Офферы организованы ввиде списка -->
           <ul class="special-offers-list">
-
             <!-- Первый оффер -->
             <li class="special-offers-item">
               <h3>Малинка даром!</h3>
@@ -205,14 +199,13 @@
               <!-- Кнопка -->
               <a class="button button-special-offer" href="#">Хочу варенья!</a>
             </li>
-
             <!-- Второй оффер -->
             <li class="special-offers-item">
               <h3>Шоколадки даром!</h3>
               <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно
                 бесплатно.</p>
               <a class="button button-special-offer" href="#">Хочу шоколадки!</a>
-            </li>
+            </li>            
           </ul>
         </section>
 
@@ -470,7 +463,8 @@
           <input class="feedback-item-mail" id="feedback-item-mail" type="email" name="mail" placeholder="Ваша почта для ответа?">
         </p>
         <p class="feedback-item">
-          <textarea class="feedback-item-text" name="feedback-text" placeholder="Напишите что-нибудь..."></textarea>
+          <label for="feedback-item-text" class="visually-hidden">Введите ваше сообщение</label>
+          <textarea id="feedback-item-text" class="feedback-item-text" name="feedback-text" placeholder="Напишите что-нибудь..."></textarea>
         </p>
         <button type="submit" class="button button-form-feedback">Отправить</button>
         <button type="button" class="modal-close ">Закрыть</button>
