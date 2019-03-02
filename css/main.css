@@ -364,8 +364,6 @@ a {
   font-weight: 500;
   text-decoration: none;
   border-radius: 16px;
-  padding-top: 7px;
-  padding-bottom: 7px;
   padding-right: 17px;
   margin-right: 10px;
 }
@@ -474,7 +472,7 @@ a {
   border: 2px solid rgba(46, 136, 228, 0.52);
 }
 
-.button-login {
+.site-nav-other .button-login {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -487,6 +485,8 @@ a {
   min-height: 32px;
   width: 93px;
   padding-left: 16px;
+  padding-top: 6px;
+  padding-bottom: 6px;
 }
 
 .button-login svg {
@@ -635,9 +635,9 @@ a {
   min-height: 32px;
   width: 100px;
   padding-left: 16px;
-  padding-top: 7px;
+  padding-top: 6px;
   padding-right: 0px;
-  padding-bottom: 7px;
+  padding-bottom: 6px;
   margin-right: 0px;
 }
 
@@ -1551,8 +1551,9 @@ a {
   height: 32px;
   width: 117px;
   padding-left: 16px;
-  padding-top: 7px;
+  padding-top: 6px;
   padding-right: 0px;
+  padding-bottom: 6px;
   margin-right: 0px;
 }
 
